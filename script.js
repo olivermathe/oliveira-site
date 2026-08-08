@@ -1,4 +1,21 @@
-// Mobile menu toggle
+// ===== Theme Toggle =====
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Load saved theme or default to light
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+}
+
+// ===== Mobile menu toggle =====
 const menuToggle = document.getElementById('menuToggle');
 const nav = document.getElementById('nav');
 
@@ -17,12 +34,12 @@ if (menuToggle && nav) {
   });
 }
 
-// Simple header shadow on scroll
+// ===== Header shadow on scroll =====
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 20) {
-    header.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+    header.style.boxShadow = '0 2px 12px rgba(0,0,0,0.08)';
   } else {
     header.style.boxShadow = 'none';
   }
