@@ -81,6 +81,82 @@ ul {
   padding: 0 24px;
 }
 
+/* ===== Animations ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Reveal on scroll base */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Hero entrance animations */
+.hero .badge {
+  animation: fadeUp 0.7s ease 0.1s both;
+}
+
+.hero h1 {
+  animation: fadeUp 0.7s ease 0.25s both;
+}
+
+.hero-subtitle {
+  animation: fadeUp 0.7s ease 0.4s both;
+}
+
+.hero .price-tag {
+  animation: scaleIn 0.7s ease 0.55s both;
+}
+
+.hero-ctas {
+  animation: fadeUp 0.7s ease 0.7s both;
+}
+
 /* ===== Header ===== */
 .header {
   position: fixed;
@@ -91,7 +167,7 @@ ul {
   background: var(--header-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-inner {
@@ -105,12 +181,22 @@ ul {
   display: flex;
   align-items: center;
   gap: 12px;
+  transition: transform 0.25s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
 }
 
 .logo-icon {
   width: 42px;
   height: 42px;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-icon {
+  transform: rotate(-4deg);
 }
 
 .logo-text {
@@ -148,6 +234,7 @@ ul {
 .theme-toggle:hover {
   border-color: var(--olive);
   color: var(--olive);
+  transform: rotate(12deg);
 }
 
 .theme-toggle svg {
@@ -178,6 +265,22 @@ ul {
   font-weight: 500;
   color: var(--text);
   transition: color var(--transition);
+  position: relative;
+}
+
+.nav a:not(.nav-cta)::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--olive);
+  transition: width 0.3s ease;
+}
+
+.nav a:not(.nav-cta):hover::after {
+  width: 100%;
 }
 
 .nav a:hover {
@@ -190,11 +293,14 @@ ul {
   padding: 10px 18px;
   border-radius: 8px;
   font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 .nav-cta:hover {
   background: var(--olive-dark) !important;
   color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(85, 107, 47, 0.3);
 }
 
 .menu-toggle {
@@ -270,6 +376,12 @@ ul {
   padding: 20px 40px;
   margin-bottom: 36px;
   box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-tag:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .price {
@@ -305,7 +417,7 @@ ul {
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: all 0.25s ease;
 }
 
 .btn-primary {
@@ -315,8 +427,12 @@ ul {
 
 .btn-primary:hover {
   background: var(--olive-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(85, 107, 47, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(85, 107, 47, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -327,6 +443,7 @@ ul {
 
 .btn-secondary:hover {
   background: var(--olive-soft);
+  transform: translateY(-2px);
 }
 
 .btn-large {
@@ -381,7 +498,12 @@ ul {
   padding: 36px;
   box-shadow: var(--shadow);
   position: relative;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
 }
 
 .service-card.featured {
@@ -451,6 +573,11 @@ ul {
 .step {
   text-align: center;
   padding: 24px 16px;
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-4px);
 }
 
 .step-number {
@@ -465,6 +592,12 @@ ul {
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover .step-number {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(85, 107, 47, 0.35);
 }
 
 .step h3 {
@@ -492,17 +625,23 @@ ul {
   background: var(--bg-card);
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  transition: transform var(--transition), box-shadow var(--transition), background-color 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.3s ease;
 }
 
 .benefit:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow);
 }
 
 .benefit-icon {
   font-size: 2rem;
   margin-bottom: 12px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.benefit:hover .benefit-icon {
+  transform: scale(1.15);
 }
 
 .benefit h3 {
@@ -547,8 +686,8 @@ ul {
 
 .cta-section .btn-primary:hover {
   background: #f0f0f0;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
 }
 
 /* ===== Footer ===== */
@@ -590,9 +729,11 @@ ul {
 .footer-contact a {
   color: var(--olive-light);
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .footer-contact a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -622,12 +763,14 @@ ul {
   justify-content: center;
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   z-index: 99;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulseSoft 2.5s ease-in-out infinite;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.08);
-  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
+  transform: scale(1.12);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+  animation: none;
 }
 
 .whatsapp-float svg {
@@ -703,5 +846,21 @@ ul {
     right: 20px;
     width: 56px;
     height: 56px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
