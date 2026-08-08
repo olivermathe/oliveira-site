@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,21 +15,36 @@
   <header class="header">
     <div class="container header-inner">
       <a href="#" class="logo">
-        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" rx="10" fill="#556B2F"/>
-          <path d="M12 28V12H16.5C19.5 12 21.5 14 21.5 17C21.5 20 19.5 22 16.5 22H14.5V28H12ZM14.5 19.5H16.5C18.2 19.5 19 18.5 19 17C19 15.5 18.2 14.5 16.5 14.5H14.5V19.5Z" fill="white"/>
-          <path d="M23 28L28.5 12H31.5L26 28H23Z" fill="white"/>
+        <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" rx="12" fill="var(--olive)"/>
+          <path d="M14 34V14h7.2c4.2 0 6.8 2.4 6.8 6.2 0 3.8-2.6 6.2-6.8 6.2H18.5V34H14zm4.5-11.2h2.6c2.2 0 3.4-1.2 3.4-3s-1.2-3-3.4-3h-2.6v6z" fill="white"/>
+          <path d="M30 34l7.2-20h4.2L34 34H30z" fill="white"/>
+          <path d="M22.5 22.5c0 0 1.8-3.2 4.2-3.8 1.2-.3 2.2.2 2.8 1.2" stroke="white" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.7"/>
         </svg>
         <span class="logo-text">Oliveira <strong>Sites</strong></span>
       </a>
-      <nav class="nav" id="nav">
-        <a href="#servicos">Serviços</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#contato" class="nav-cta">Falar no WhatsApp</a>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <nav class="nav" id="nav">
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#contato" class="nav-cta">Falar no WhatsApp</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
