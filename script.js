@@ -44,3 +44,34 @@ window.addEventListener('scroll', () => {
     header.style.boxShadow = 'none';
   }
 });
+
+// ===== Scroll Reveal Animations =====
+const revealElements = document.querySelectorAll(
+  '.section-header, .service-card, .step, .benefit, .cta-section h2, .cta-section p, .cta-section .btn'
+);
+
+revealElements.forEach((el, index) => {
+  el.classList.add('reveal');
+  // Stagger within groups
+  if (el.classList.contains('service-card') || el.classList.contains('step') || el.classList.contains('benefit')) {
+    const delayClass = `reveal-delay-${(index % 4) + 1}`;
+    el.classList.add(delayClass);
+  }
+});
+
+const observerOptions = {
+  threshold: 0.12,
+  rootMargin: '0px 0px -40px 0px'
+};
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Optional: unobserve after reveal for better performance
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+revealElements.forEach(el => revealObserver.observe(el));
