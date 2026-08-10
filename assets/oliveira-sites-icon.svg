@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Oliveira Sites</title>
+  <desc id="desc">Uma oliveira em forma de cérebro com conexões digitais.</desc>
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="#556B2F"/>
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="18" d="M249 99c-24-25-68-18-78 16-33-8-60 21-51 53-30 12-35 51-10 70-17 29 5 65 39 64 10 33 51 47 78 25 16-13 26-33 29-54V119"/>
+    <path stroke-width="18" d="M263 99c24-25 68-18 78 16 33-8 60 21 51 53 30 12 35 51 10 70 17 29-5 65-39 64-10 33-51 47-78 25-16-13-26-33-29-54V119"/>
+    <path stroke-width="16" d="M256 274v112m0-84-52-45m52 18 54-48m-54 99-36 38m36-23 34 35"/>
+    <path stroke-width="12" d="M204 257v-30l-32-27m138 27v-31l31-24m-129-8-31-25m119 38 34-29M162 242h-28m244-2h-28"/>
+    <path stroke-width="14" d="M256 386c-29 15-50 32-66 54m66-54c28 15 50 32 66 54m-66-54v56"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="172" cy="200" r="11"/><circle cx="181" cy="139" r="11"/><circle cx="134" cy="242" r="11"/>
+    <circle cx="341" cy="172" r="11"/><circle cx="310" cy="196" r="11"/><circle cx="378" cy="240" r="11"/>
+    <path d="M101 319c27-12 47-6 61 15-27 12-48 7-61-15Z"/>
+    <path d="M350 334c15-21 36-27 61-14-14 22-35 27-61 14Z"/>
+  </g>
+</svg>
