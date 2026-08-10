@@ -47,7 +47,7 @@ window.addEventListener('scroll', () => {
 
 // ===== Scroll Reveal Animations =====
 const revealElements = document.querySelectorAll(
-  '.section-header, .service-card, .step, .benefit, .cta-section h2, .cta-section p, .cta-section .btn'
+  '.section-header, .service-card, .step, .benefit, .custom-project, .cta-section h2, .cta-section p, .cta-section .btn'
 );
 
 revealElements.forEach((el, index) => {
