@@ -397,6 +397,17 @@ ul {
   margin-top: 4px;
 }
 
+.payment-note {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--olive);
+  background: var(--olive-soft);
+  padding: 6px 14px;
+  border-radius: 50px;
+}
+
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
@@ -534,7 +545,18 @@ ul {
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--olive);
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+}
+
+.payment-guarantee {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--olive);
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  background: var(--olive-soft);
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .service-list {
@@ -654,6 +676,35 @@ ul {
 .benefit p {
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+/* ===== Custom Projects Section ===== */
+.custom-project {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.custom-project h2 {
+  font-size: clamp(1.5rem, 3vw, 1.85rem);
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 16px;
+}
+
+.custom-project p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== CTA Section ===== */
@@ -790,6 +841,10 @@ ul {
 
   .benefits {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .custom-project {
+    padding: 36px 24px;
   }
 }
 
