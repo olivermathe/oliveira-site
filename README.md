@@ -4,7 +4,7 @@ Site oficial da **Oliveira Sites** — desenvolvimento de sites e landing pages 
 
 **Preço promocional:** de R$ 600 por R$ 400
 **Entrega:** até 24 horas  
-**WhatsApp:** (51) 98215-4848
+**WhatsApp:** (51) 99272-8114
 
 ## Tecnologias
 
@@ -31,4 +31,4 @@ O site ficará disponível em:
 
 ## Contato
 
-WhatsApp: [51 98215-4848](https://wa.me/5551982154848)
+WhatsApp: [51 99272-8114](https://wa.me/5551992728114)
