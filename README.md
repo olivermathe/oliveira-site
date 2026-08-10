@@ -2,7 +2,7 @@
 
 Site oficial da **Oliveira Sites** — desenvolvimento de sites e landing pages profissionais para comércios locais.
 
-**Preço de lançamento:** R$ 500  
+**Preço promocional:** de R$ 600 por R$ 400
 **Entrega:** até 24 horas  
 **WhatsApp:** (51) 98215-4848
 
