@@ -1,0 +1,57 @@
+{
+  "contents": [
+    {
+      "slug": "04-site-no-celular",
+      "title": "Experiência do site no celular",
+      "slides": [
+        { "file": "imagem", "template": "mobile-experience" }
+      ]
+    },
+    {
+      "slug": "05-anuncio-e-landing-page",
+      "title": "Anúncios e landing pages",
+      "slides": [
+        { "file": "01-capa", "template": "ad-flow-cover" },
+        { "file": "02-mesma-promessa", "template": "message-match" },
+        { "file": "03-um-objetivo", "template": "single-goal" },
+        { "file": "04-mobile-e-rapida", "template": "mobile-performance" },
+        { "file": "05-oferta", "template": "offer" }
+      ]
+    },
+    {
+      "slug": "06-como-o-google-entende-seu-site",
+      "title": "Como o Google entende um site",
+      "slides": [
+        { "file": "imagem", "template": "search-checklist" }
+      ]
+    },
+    {
+      "slug": "07-instagram-e-site",
+      "title": "Instagram e site",
+      "slides": [
+        { "file": "imagem", "template": "social-to-site" }
+      ]
+    },
+    {
+      "slug": "08-acessibilidade-digital",
+      "title": "Acessibilidade digital",
+      "slides": [
+        { "file": "imagem", "template": "accessibility-grid" }
+      ]
+    },
+    {
+      "slug": "09-https-e-confianca",
+      "title": "HTTPS e confiança",
+      "slides": [
+        { "file": "imagem", "template": "secure-browser" }
+      ]
+    },
+    {
+      "slug": "10-site-que-gera-contatos",
+      "title": "Site orientado a contatos",
+      "slides": [
+        { "file": "imagem", "template": "conversion-map" }
+      ]
+    }
+  ]
+}

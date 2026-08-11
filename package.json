@@ -4,7 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node build.mjs"
+    "build": "node build.mjs",
+    "instagram:generate": "node Instagram/generator/cli.mjs",
+    "instagram:list": "node Instagram/generator/cli.mjs --list",
+    "test:instagram": "node --test Instagram/generator/generator.test.mjs"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

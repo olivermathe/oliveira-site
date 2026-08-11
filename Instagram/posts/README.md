@@ -20,6 +20,8 @@ Kit inicial para o perfil [@oliveira.sites.tech](https://www.instagram.com/olive
 
 Todos os arquivos finais estão em **1080 × 1350 px**, proporção vertical **4:5**, prontos para o feed do Instagram. Os arquivos `.svg` são as fontes editáveis das artes e os arquivos `.jpg` são as versões para publicação.
 
+As artes são montadas por um [gerador baseado em componentes](../generator/README.md). A numeração das pastas e dos arquivos serve somente para organização: números de post, contagem de páginas e termos como `carrossel` não aparecem no conteúdo visual.
+
 ## Cadência recomendada
 
 Publicar de duas a três vezes por semana, alternando educação, diagnóstico e oferta. O post 05 pode receber mídia paga depois de validar organicamente a resposta do público.
