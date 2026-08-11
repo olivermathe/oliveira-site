@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#07120D" flood-opacity=".20"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0C2117"/><stop offset="1" stop-color="#244B35"/></linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF85"/><stop offset="1" stop-color="#8CCB58"/></linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+    <rect width="1080" height="1350" fill="#F7F4EA"/>
+    
+    
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk9saXZlaXJhIFNpdGVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+VW1hIG9saXZlaXJhIGVtIGZvcm1hIGRlIGPDqXJlYnJvIGNvbSBjb25leMO1ZXMgZGlnaXRhaXMuPC9kZXNjPgogIDxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjQ2NCIgaGVpZ2h0PSI0NjQiIHJ4PSIxMTIiIGZpbGw9IiM1NTZCMkYiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjQ5IDk5Yy0yNC0yNS02OC0xOC03OCAxNi0zMy04LTYwIDIxLTUxIDUzLTMwIDEyLTM1IDUxLTEwIDcwLTE3IDI5IDUgNjUgMzkgNjQgMTAgMzMgNTEgNDcgNzggMjUgMTYtMTMgMjYtMzMgMjktNTRWMTE5Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjYzIDk5YzI0LTI1IDY4LTE4IDc4IDE2IDMzLTggNjAgMjEgNTEgNTMgMzAgMTIgMzUgNTEgMTAgNzAgMTcgMjktNSA2NS0zOSA2NC0xMCAzMy01MSA0Ny03OCAyNS0xNi0xMy0yNi0zMy0yOS01NFYxMTkiLz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yNTYgMjc0djExMm0wLTg0LTUyLTQ1bTUyIDE4IDU0LTQ4bS01NCA5OS0zNiAzOG0zNi0yMyAzNCAzNSIvPgogICAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxMiIgZD0iTTIwNCAyNTd2LTMwbC0zMi0yN20xMzggMjd2LTMxbDMxLTI0bS0xMjktOC0zMS0yNW0xMTkgMzggMzQtMjlNMTYyIDI0MmgtMjhtMjQ0LTJoLTI4Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE0IiBkPSJNMjU2IDM4NmMtMjkgMTUtNTAgMzItNjYgNTRtNjYtNTRjMjggMTUgNTAgMzIgNjYgNTRtLTY2LTU0djU2Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiPgogICAgPGNpcmNsZSBjeD0iMTcyIiBjeT0iMjAwIiByPSIxMSIvPjxjaXJjbGUgY3g9IjE4MSIgY3k9IjEzOSIgcj0iMTEiLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIyNDIiIHI9IjExIi8+CiAgICA8Y2lyY2xlIGN4PSIzNDEiIGN5PSIxNzIiIHI9IjExIi8+PGNpcmNsZSBjeD0iMzEwIiBjeT0iMTk2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjM3OCIgY3k9IjI0MCIgcj0iMTEiLz4KICAgIDxwYXRoIGQ9Ik0xMDEgMzE5YzI3LTEyIDQ3LTYgNjEgMTUtMjcgMTItNDggNy02MS0xNVoiLz4KICAgIDxwYXRoIGQ9Ik0zNTAgMzM0YzE1LTIxIDM2LTI3IDYxLTE0LTE0IDIyLTM1IDI3LTYxIDE0WiIvPgogIDwvZz4KPC9zdmc+Cg==" x="72" y="66" width="64" height="64"/>
+    <text x="154" y="105" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#10231A">LANDING PAGE QUE CONVERTE</text>
+    <circle cx="1000" cy="98" r="5" fill="#B9E769"/>
+    <circle cx="978" cy="98" r="5" fill="#567A35" opacity=".75"/>
+    <circle cx="956" cy="98" r="5" fill="#10231A" opacity=".25"/>
+    
+    <text x="72" y="245" font-family="DejaVu Sans, sans-serif" font-size="64" font-weight="800" fill="#10231A" text-anchor="start" opacity="1"><tspan x="72" dy="0">1. Continue a</tspan><tspan x="72" dy="71.68">mesma promessa</tspan></text>
+    <text x="72" y="430" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#516259" text-anchor="start" opacity="1"><tspan x="72" dy="0">Se o anúncio fala em orçamento rápido,</tspan><tspan x="72" dy="39">a página precisa abrir falando disso.</tspan></text>
+    <g transform="translate(80 610)"><rect width="330" height="300" rx="32" fill="#183426" filter="url(#shadow)"/><rect x="26" y="26" width="95" height="32" rx="16" fill="#B9E769"/><text x="74" y="48" text-anchor="middle" font-family="DejaVu Sans" font-size="14" font-weight="800" fill="#10231A">ANÚNCIO</text><text x="28" y="122" font-family="DejaVu Sans" font-size="27" font-weight="800" fill="white">Orçamento</text><text x="28" y="160" font-family="DejaVu Sans" font-size="27" font-weight="800" fill="#B9E769">em poucos cliques</text><rect x="28" y="214" width="190" height="48" rx="24" fill="white" opacity=".12"/></g>
+    <path d="M435 760h140" stroke="#567A35" stroke-width="9" stroke-linecap="round"/><path d="M555 735l30 25-30 25" fill="none" stroke="#567A35" stroke-width="9" stroke-linejoin="round"/>
+    <g filter="url(#shadow)">
+    <rect x="610" y="570" width="370" height="410" rx="28" fill="#FFFFFF"/>
+    <rect x="610" y="570" width="370" height="64" rx="28" fill="#EEF0E9"/>
+    <circle cx="638" cy="602" r="7" fill="#FF9566"/><circle cx="661" cy="602" r="7" fill="#FFD66B"/><circle cx="684" cy="602" r="7" fill="#67D7D0"/>
+    <rect x="722" y="588" width="228" height="28" rx="14" fill="#FFFFFF"/>
+    <rect x="644" y="673" width="170.20000000000002" height="16" rx="8" fill="#10231A" opacity=".88"/>
+    <rect x="644" y="709" width="125.80000000000001" height="10" rx="5" fill="#10231A" opacity=".28"/>
+    <rect x="644" y="731" width="148" height="10" rx="5" fill="#10231A" opacity=".18"/>
+    <rect x="644" y="773" width="96.2" height="44" rx="22" fill="#B9E769"/>
+    <rect x="828.3" y="665" width="118.4" height="278" rx="22" fill="#B9E769" opacity=".22"/>
+    <circle cx="887.5" cy="787.3" r="37" fill="#B9E769" opacity=".7"/>
+  </g>
+    <rect x="642" y="680" width="250" height="20" rx="10" fill="#10231A"/><text x="642" y="744" font-family="DejaVu Sans" font-size="24" font-weight="800" fill="#10231A">Peça seu orçamento</text><rect x="642" y="780" width="205" height="55" rx="27" fill="#567A35"/><text x="744" y="815" text-anchor="middle" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="white">FALAR AGORA</text>
+    <g transform="translate(210 1060)"><rect width="660" height="88" rx="44" fill="#DDF4C7"/><text x="330" y="55" text-anchor="middle" font-family="DejaVu Sans" font-size="23" font-weight="800" fill="#567A35">ANÚNCIO E PÁGINA PRECISAM CONVERSAR</text></g>
+    <text x="72" y="1292" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="600" fill="#10231A" opacity=".78">02 / 05</text>
+  <rect x="910" y="1274" width="98" height="4" rx="2" fill="#B9E769"/>
+  </svg>

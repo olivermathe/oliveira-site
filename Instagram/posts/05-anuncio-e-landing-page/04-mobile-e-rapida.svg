@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#07120D" flood-opacity=".20"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0C2117"/><stop offset="1" stop-color="#244B35"/></linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF85"/><stop offset="1" stop-color="#8CCB58"/></linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+    <rect width="1080" height="1350" fill="#F7F4EA"/>
+    
+    
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk9saXZlaXJhIFNpdGVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+VW1hIG9saXZlaXJhIGVtIGZvcm1hIGRlIGPDqXJlYnJvIGNvbSBjb25leMO1ZXMgZGlnaXRhaXMuPC9kZXNjPgogIDxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjQ2NCIgaGVpZ2h0PSI0NjQiIHJ4PSIxMTIiIGZpbGw9IiM1NTZCMkYiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjQ5IDk5Yy0yNC0yNS02OC0xOC03OCAxNi0zMy04LTYwIDIxLTUxIDUzLTMwIDEyLTM1IDUxLTEwIDcwLTE3IDI5IDUgNjUgMzkgNjQgMTAgMzMgNTEgNDcgNzggMjUgMTYtMTMgMjYtMzMgMjktNTRWMTE5Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjYzIDk5YzI0LTI1IDY4LTE4IDc4IDE2IDMzLTggNjAgMjEgNTEgNTMgMzAgMTIgMzUgNTEgMTAgNzAgMTcgMjktNSA2NS0zOSA2NC0xMCAzMy01MSA0Ny03OCAyNS0xNi0xMy0yNi0zMy0yOS01NFYxMTkiLz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yNTYgMjc0djExMm0wLTg0LTUyLTQ1bTUyIDE4IDU0LTQ4bS01NCA5OS0zNiAzOG0zNi0yMyAzNCAzNSIvPgogICAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxMiIgZD0iTTIwNCAyNTd2LTMwbC0zMi0yN20xMzggMjd2LTMxbDMxLTI0bS0xMjktOC0zMS0yNW0xMTkgMzggMzQtMjlNMTYyIDI0MmgtMjhtMjQ0LTJoLTI4Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE0IiBkPSJNMjU2IDM4NmMtMjkgMTUtNTAgMzItNjYgNTRtNjYtNTRjMjggMTUgNTAgMzIgNjYgNTRtLTY2LTU0djU2Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiPgogICAgPGNpcmNsZSBjeD0iMTcyIiBjeT0iMjAwIiByPSIxMSIvPjxjaXJjbGUgY3g9IjE4MSIgY3k9IjEzOSIgcj0iMTEiLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIyNDIiIHI9IjExIi8+CiAgICA8Y2lyY2xlIGN4PSIzNDEiIGN5PSIxNzIiIHI9IjExIi8+PGNpcmNsZSBjeD0iMzEwIiBjeT0iMTk2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjM3OCIgY3k9IjI0MCIgcj0iMTEiLz4KICAgIDxwYXRoIGQ9Ik0xMDEgMzE5YzI3LTEyIDQ3LTYgNjEgMTUtMjcgMTItNDggNy02MS0xNVoiLz4KICAgIDxwYXRoIGQ9Ik0zNTAgMzM0YzE1LTIxIDM2LTI3IDYxLTE0LTE0IDIyLTM1IDI3LTYxIDE0WiIvPgogIDwvZz4KPC9zdmc+Cg==" x="72" y="66" width="64" height="64"/>
+    <text x="154" y="105" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#10231A">LANDING PAGE QUE CONVERTE</text>
+    <circle cx="1000" cy="98" r="5" fill="#B9E769"/>
+    <circle cx="978" cy="98" r="5" fill="#567A35" opacity=".75"/>
+    <circle cx="956" cy="98" r="5" fill="#10231A" opacity=".25"/>
+    
+    <text x="72" y="245" font-family="DejaVu Sans, sans-serif" font-size="62" font-weight="800" fill="#10231A" text-anchor="start" opacity="1"><tspan x="72" dy="0">3. Rápida e</tspan><tspan x="72" dy="69.44000000000001">perfeita no celular</tspan></text>
+    <text x="72" y="425" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#516259" text-anchor="start" opacity="1"><tspan x="72" dy="0">A melhor campanha não corrige uma</tspan><tspan x="72" dy="40.5">experiência lenta ou confusa.</tspan></text>
+    <g filter="url(#shadow)">
+    <rect x="145" y="600" width="300" height="525" rx="52" fill="#0B1711"/>
+    <rect x="157" y="612" width="276" height="501" rx="42" fill="#FFFFFF"/>
+    <rect x="253" y="622" width="84.00000000000001" height="9" rx="4.5" fill="#0B1711"/>
+    <rect x="175" y="680" width="240" height="150" rx="25" fill="#183426"/><rect x="200" y="720" width="160" height="15" rx="7" fill="white"/><rect x="200" y="756" width="115" height="9" rx="4" fill="white" opacity=".4"/><rect x="200" y="785" width="126" height="36" rx="18" fill="#B9E769"/><rect x="175" y="852" width="112" height="112" rx="24" fill="#DDF4C7"/><rect x="303" y="852" width="112" height="112" rx="24" fill="#67D7D0" opacity=".25"/>
+  </g>
+    <g transform="translate(560 610)"><circle cx="190" cy="190" r="190" fill="#FFFFFF" filter="url(#shadow)"/><path d="M65 222a135 135 0 01250 0" fill="none" stroke="#E2E6E1" stroke-width="32" stroke-linecap="round"/><path d="M65 222a135 135 0 01197-111" fill="none" stroke="#B9E769" stroke-width="32" stroke-linecap="round"/><path d="M190 220l76-92" stroke="#10231A" stroke-width="12" stroke-linecap="round"/><circle cx="190" cy="220" r="23" fill="#10231A"/><text x="190" y="305" text-anchor="middle" font-family="DejaVu Sans" font-size="24" font-weight="800" fill="#10231A">CARREGAMENTO</text><text x="190" y="338" text-anchor="middle" font-family="DejaVu Sans" font-size="18" fill="#52625A">rápido e estável</text></g>
+    <rect x="545" y="1040" width="410" height="82" rx="41" fill="#183426"/><text x="750" y="1091" text-anchor="middle" font-family="DejaVu Sans" font-size="22" font-weight="800" fill="white">CLIQUE SEM FRICÇÃO</text>
+    <text x="72" y="1292" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="600" fill="#10231A" opacity=".78">04 / 05</text>
+  <rect x="910" y="1274" width="98" height="4" rx="2" fill="#B9E769"/>
+  </svg>

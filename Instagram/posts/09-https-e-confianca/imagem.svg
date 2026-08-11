@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#07120D" flood-opacity=".20"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0C2117"/><stop offset="1" stop-color="#244B35"/></linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF85"/><stop offset="1" stop-color="#8CCB58"/></linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+    <rect width="1080" height="1350" fill="url(#darkGrad)"/>
+    <rect width="1080" height="1350" fill="url(#grid)"/>
+    
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk9saXZlaXJhIFNpdGVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+VW1hIG9saXZlaXJhIGVtIGZvcm1hIGRlIGPDqXJlYnJvIGNvbSBjb25leMO1ZXMgZGlnaXRhaXMuPC9kZXNjPgogIDxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjQ2NCIgaGVpZ2h0PSI0NjQiIHJ4PSIxMTIiIGZpbGw9IiM1NTZCMkYiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjQ5IDk5Yy0yNC0yNS02OC0xOC03OCAxNi0zMy04LTYwIDIxLTUxIDUzLTMwIDEyLTM1IDUxLTEwIDcwLTE3IDI5IDUgNjUgMzkgNjQgMTAgMzMgNTEgNDcgNzggMjUgMTYtMTMgMjYtMzMgMjktNTRWMTE5Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjYzIDk5YzI0LTI1IDY4LTE4IDc4IDE2IDMzLTggNjAgMjEgNTEgNTMgMzAgMTIgMzUgNTEgMTAgNzAgMTcgMjktNSA2NS0zOSA2NC0xMCAzMy01MSA0Ny03OCAyNS0xNi0xMy0yNi0zMy0yOS01NFYxMTkiLz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yNTYgMjc0djExMm0wLTg0LTUyLTQ1bTUyIDE4IDU0LTQ4bS01NCA5OS0zNiAzOG0zNi0yMyAzNCAzNSIvPgogICAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxMiIgZD0iTTIwNCAyNTd2LTMwbC0zMi0yN20xMzggMjd2LTMxbDMxLTI0bS0xMjktOC0zMS0yNW0xMTkgMzggMzQtMjlNMTYyIDI0MmgtMjhtMjQ0LTJoLTI4Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE0IiBkPSJNMjU2IDM4NmMtMjkgMTUtNTAgMzItNjYgNTRtNjYtNTRjMjggMTUgNTAgMzIgNjYgNTRtLTY2LTU0djU2Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiPgogICAgPGNpcmNsZSBjeD0iMTcyIiBjeT0iMjAwIiByPSIxMSIvPjxjaXJjbGUgY3g9IjE4MSIgY3k9IjEzOSIgcj0iMTEiLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIyNDIiIHI9IjExIi8+CiAgICA8Y2lyY2xlIGN4PSIzNDEiIGN5PSIxNzIiIHI9IjExIi8+PGNpcmNsZSBjeD0iMzEwIiBjeT0iMTk2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjM3OCIgY3k9IjI0MCIgcj0iMTEiLz4KICAgIDxwYXRoIGQ9Ik0xMDEgMzE5YzI3LTEyIDQ3LTYgNjEgMTUtMjcgMTItNDggNy02MS0xNVoiLz4KICAgIDxwYXRoIGQ9Ik0zNTAgMzM0YzE1LTIxIDM2LTI3IDYxLTE0LTE0IDIyLTM1IDI3LTYxIDE0WiIvPgogIDwvZz4KPC9zdmc+Cg==" x="72" y="66" width="64" height="64"/>
+    <text x="154" y="105" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">OLIVEIRA SITES · 09</text>
+    <circle cx="1000" cy="98" r="5" fill="#B9E769"/>
+    <circle cx="978" cy="98" r="5" fill="#67D7D0" opacity=".75"/>
+    <circle cx="956" cy="98" r="5" fill="#FFFFFF" opacity=".25"/>
+    
+    <circle cx="830" cy="425" r="350" fill="#67D7D0" opacity=".10"/>
+    <text x="72" y="285" font-family="DejaVu Sans, sans-serif" font-size="70" font-weight="800" fill="#FFFFFF" text-anchor="start" opacity="1"><tspan x="72" dy="0">O cadeado não é</tspan><tspan x="72" dy="78.4">só um detalhe.</tspan></text>
+    <text x="72" y="485" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#FFFFFF" text-anchor="start" opacity="0.78"><tspan x="72" dy="0">HTTPS protege a conexão e evita</tspan><tspan x="72" dy="40.5">o aviso de página não segura.</tspan></text>
+    <g transform="translate(90 690)"><g filter="url(#shadow)">
+    <rect x="0" y="0" width="900" height="385" rx="28" fill="#183426"/>
+    <rect x="0" y="0" width="900" height="64" rx="28" fill="#0E241A"/>
+    <circle cx="28" cy="32" r="7" fill="#FF9566"/><circle cx="51" cy="32" r="7" fill="#FFD66B"/><circle cx="74" cy="32" r="7" fill="#67D7D0"/>
+    <rect x="112" y="18" width="758" height="28" rx="14" fill="#274536"/>
+    <rect x="34" y="103" width="414" height="16" rx="8" fill="#FFFFFF" opacity=".88"/>
+    <rect x="34" y="139" width="306" height="10" rx="5" fill="#FFFFFF" opacity=".28"/>
+    <rect x="34" y="161" width="360" height="10" rx="5" fill="#FFFFFF" opacity=".18"/>
+    <rect x="34" y="203" width="234" height="44" rx="22" fill="#B9E769"/>
+    <rect x="531" y="95" width="288" height="253" rx="22" fill="#B9E769" opacity=".22"/>
+    <circle cx="675" cy="204.05" r="38.5" fill="#B9E769" opacity=".7"/>
+  </g>
+      <g transform="translate(355 75)"><path d="M95 20l90 34v70c0 78-44 127-90 151-46-24-90-73-90-151V54z" fill="#B9E769" filter="url(#shadow)"/><rect x="59" y="113" width="72" height="68" rx="15" fill="#10231A"/><path d="M74 112V87a21 21 0 0142 0v25" fill="none" stroke="#10231A" stroke-width="12" stroke-linecap="round"/><circle cx="95" cy="143" r="8" fill="#B9E769"/><path d="M95 151v15" stroke="#B9E769" stroke-width="6" stroke-linecap="round"/></g>
+      <rect x="150" y="315" width="600" height="42" rx="21" fill="white" opacity=".09"/><text x="450" y="343" text-anchor="middle" font-family="DejaVu Sans" font-size="18" font-weight="700" fill="white">https://seunegocio.com.br</text>
+    </g>
+    <rect x="275" y="1132" width="530" height="74" rx="37" fill="#B9E769"/><text x="540" y="1179" text-anchor="middle" font-family="DejaVu Sans" font-size="22" font-weight="800" fill="#10231A">CONEXÃO SEGURA. MAIS CONFIANÇA.</text>
+    <text x="72" y="1292" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" opacity=".78">@oliveira.sites.tech</text>
+  <rect x="910" y="1274" width="98" height="4" rx="2" fill="#B9E769"/>
+  </svg>

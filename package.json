@@ -7,6 +7,7 @@
     "build": "node build.mjs"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "clean-css": "5.3.3",
     "html-minifier-terser": "7.2.0",
     "svgo": "4.0.2",
