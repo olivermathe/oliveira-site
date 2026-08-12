@@ -153,6 +153,80 @@ function conversionPost() {
   return canvas({ background: C.cream, theme: 'light', body });
 }
 
+function measurementDashboardPost() {
+  const body = `
+    ${badge(72, 190, 'MENSURAÇÃO', { fill: C.lime, color: C.ink })}
+    ${textLines(72, 330, ['Seu site gera visitas.', 'Mas gera ações?'], { size: 67, weight: 800, fill: C.white })}
+    ${textLines(72, 505, ['Meça os passos que aproximam', 'uma pessoa do seu negócio.'], { size: 27, weight: 400, gap: 1.5, fill: C.white, opacity: .78 })}
+    <g transform="translate(72 680)" filter="url(#shadow)">
+      <rect width="936" height="470" rx="46" fill="#F9F8F2"/>
+      <rect x="0" y="0" width="936" height="70" rx="46" fill="#E9EEE8"/>
+      <circle cx="38" cy="35" r="7" fill="${C.orange}"/><circle cx="62" cy="35" r="7" fill="${C.yellow}"/><circle cx="86" cy="35" r="7" fill="${C.cyan}"/>
+      <text x="124" y="43" font-family="DejaVu Sans" font-size="18" font-weight="700" fill="${C.ink}">AÇÕES IMPORTANTES</text>
+      <g transform="translate(46 112)">
+        <rect width="250" height="122" rx="27" fill="${C.deep}"/>
+        <circle cx="55" cy="61" r="28" fill="${C.cyan}" opacity=".42"/>
+        <path d="M42 62h26M55 49v26" stroke="white" stroke-width="6" stroke-linecap="round"/>
+        <text x="102" y="54" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="white">VISITA</text>
+        <text x="102" y="82" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".65">chegou ao site</text>
+      </g>
+      <path d="M315 173h55" stroke="${C.green}" stroke-width="7" stroke-linecap="round"/><path d="M355 157l20 16-20 16" fill="none" stroke="${C.green}" stroke-width="7" stroke-linejoin="round"/>
+      <g transform="translate(389 112)">
+        <rect width="250" height="122" rx="27" fill="${C.mint}"/>
+        <circle cx="55" cy="61" r="28" fill="${C.lime}"/>
+        <path d="M46 49l24 13-24 13z" fill="${C.ink}"/>
+        <text x="102" y="54" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="${C.ink}">INTERAÇÃO</text>
+        <text x="102" y="82" font-family="DejaVu Sans" font-size="15" fill="${C.ink}" opacity=".65">clicou ou enviou</text>
+      </g>
+      <path d="M658 173h55" stroke="${C.green}" stroke-width="7" stroke-linecap="round"/><path d="M698 157l20 16-20 16" fill="none" stroke="${C.green}" stroke-width="7" stroke-linejoin="round"/>
+      <g transform="translate(732 112)">
+        <rect width="158" height="122" rx="27" fill="${C.lime}"/>
+        <circle cx="79" cy="48" r="25" fill="${C.ink}"/>
+        <path d="M68 48l8 8 16-19" fill="none" stroke="${C.lime}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="79" y="96" text-anchor="middle" font-family="DejaVu Sans" font-size="17" font-weight="800" fill="${C.ink}">RESULTADO</text>
+      </g>
+      <g transform="translate(46 280)">
+        <rect width="844" height="135" rx="29" fill="${C.deep}"/>
+        <path d="M36 91C122 74 152 98 232 59s128 17 207-11 124 31 204-4 118-19 165-30" fill="none" stroke="${C.lime}" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="232" cy="59" r="8" fill="${C.lime}"/><circle cx="439" cy="48" r="8" fill="${C.lime}"/><circle cx="643" cy="44" r="8" fill="${C.lime}"/>
+        <text x="36" y="38" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="white">ENTENDA O CAMINHO, NÃO SÓ O ACESSO</text>
+      </g>
+    </g>`;
+  return canvas({ background: 'url(#darkGrad)', theme: 'dark', body });
+}
+
+function localInformationPost() {
+  const body = `
+    ${badge(72, 190, 'PRESENÇA LOCAL')}
+    ${textLines(72, 330, ['Seu cliente encontra', 'as informações certas?'], { size: 65, weight: 800 })}
+    ${textLines(72, 505, ['Site e perfil comercial devem contar', 'a mesma história — sem desencontros.'], { size: 26, weight: 400, gap: 1.5, fill: '#516259' })}
+    <g transform="translate(72 665)">
+      <path d="M55 86C175 26 280 154 392 91S599 22 720 93s116 164 186 211" fill="none" stroke="${C.line}" stroke-width="22" stroke-linecap="round"/>
+      <path d="M8 320c132-78 244 35 342-16s190-24 285 41 181 40 286-14" fill="none" stroke="${C.mint}" stroke-width="38" stroke-linecap="round"/>
+      <g transform="translate(48 80)" filter="url(#shadow)">
+        <rect width="430" height="410" rx="40" fill="white"/>
+        <rect x="30" y="30" width="370" height="58" rx="29" fill="#F0F2ED"/>
+        <circle cx="65" cy="59" r="14" fill="none" stroke="${C.green}" stroke-width="5"/><path d="M75 69l12 12" stroke="${C.green}" stroke-width="5" stroke-linecap="round"/>
+        <text x="107" y="66" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="${C.ink}">seu serviço perto de mim</text>
+        <circle cx="74" cy="149" r="34" fill="${C.lime}"/>
+        <path d="M74 125c-16 0-28 12-28 28 0 21 28 48 28 48s28-27 28-48c0-16-12-28-28-28zm0 38a11 11 0 110-22 11 11 0 010 22z" fill="${C.ink}"/>
+        <text x="128" y="145" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="${C.ink}">Seu negócio</text>
+        <text x="128" y="177" font-family="DejaVu Sans" font-size="16" fill="#65746C">informação clara e atual</text>
+        <line x1="30" y1="220" x2="400" y2="220" stroke="${C.line}"/>
+        <g transform="translate(30 252)"><circle cx="20" cy="20" r="20" fill="${C.mint}"/><path d="M14 20h12M20 14v12" stroke="${C.green}" stroke-width="4" stroke-linecap="round"/><text x="58" y="27" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="${C.ink}">Endereço e área atendida</text></g>
+        <g transform="translate(30 315)"><circle cx="20" cy="20" r="20" fill="${C.cyan}" opacity=".38"/><circle cx="20" cy="20" r="9" fill="none" stroke="${C.ink}" stroke-width="4"/><path d="M20 11v10l7 5" stroke="${C.ink}" stroke-width="4" stroke-linecap="round"/><text x="58" y="27" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="${C.ink}">Horários e contato</text></g>
+      </g>
+      <g transform="translate(558 145)">
+        <circle cx="170" cy="170" r="170" fill="${C.deep}" filter="url(#shadow)"/>
+        <path d="M170 66c-57 0-103 45-103 102 0 77 103 176 103 176s103-99 103-176c0-57-46-102-103-102zm0 140a40 40 0 110-80 40 40 0 010 80z" fill="${C.lime}"/>
+        <circle cx="170" cy="166" r="24" fill="${C.deep}"/>
+        <g transform="translate(270 25)"><rect width="118" height="68" rx="34" fill="${C.orange}"/><path d="M33 34l15 15 34-35" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>
+      </g>
+    </g>
+    <rect x="540" y="1100" width="468" height="72" rx="36" fill="${C.deep}"/><text x="774" y="1146" text-anchor="middle" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="white">CONSISTÊNCIA GERA CLAREZA</text>`;
+  return canvas({ background: C.cream, theme: 'light', body });
+}
+
 function headlineVisualPost({
   badgeLabel = 'PRESENÇA DIGITAL',
   title = ['Seu negócio', 'merece destaque.'],
@@ -192,6 +266,8 @@ export const templateRegistry = Object.freeze({
   'accessibility-grid': accessibilityPost,
   'secure-browser': securityPost,
   'conversion-map': conversionPost,
+  'measurement-dashboard': measurementDashboardPost,
+  'local-information': localInformationPost,
   'headline-visual': headlineVisualPost
 });
 

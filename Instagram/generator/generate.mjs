@@ -70,7 +70,7 @@ async function renderArtwork(content, slide, convertCommand) {
   const output = path.join(postsRoot, content.slug);
   await mkdir(output, { recursive: true });
 
-  const svg = renderTemplate(slide.template, slide.data ?? {});
+  const svg = renderTemplate(slide.template, slide.data ?? {}).replace(/[ \t]+$/gm, '');
   const svgPath = path.join(output, `${slide.file}.svg`);
   const pngPath = path.join(output, `${slide.file}.png`);
   const jpgPath = path.join(output, `${slide.file}.jpg`);

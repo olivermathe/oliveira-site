@@ -52,6 +52,20 @@
       "slides": [
         { "file": "imagem", "template": "conversion-map" }
       ]
+    },
+    {
+      "slug": "11-medir-acoes-no-site",
+      "title": "Mensuração de ações importantes no site",
+      "slides": [
+        { "file": "imagem", "template": "measurement-dashboard" }
+      ]
+    },
+    {
+      "slug": "12-informacoes-locais-consistentes",
+      "title": "Informações locais consistentes",
+      "slides": [
+        { "file": "imagem", "template": "local-information" }
+      ]
     }
   ]
 }
