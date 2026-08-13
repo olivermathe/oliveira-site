@@ -66,6 +66,20 @@
       "slides": [
         { "file": "imagem", "template": "local-information" }
       ]
+    },
+    {
+      "slug": "13-formulario-de-contato-simples",
+      "title": "Formulário de contato simples",
+      "slides": [
+        { "file": "imagem", "template": "simple-contact-form" }
+      ]
+    },
+    {
+      "slug": "14-cookies-com-escolhas-claras",
+      "title": "Cookies com escolhas claras",
+      "slides": [
+        { "file": "imagem", "template": "cookie-choices" }
+      ]
     }
   ]
 }
