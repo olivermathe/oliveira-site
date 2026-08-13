@@ -227,6 +227,68 @@ function localInformationPost() {
   return canvas({ background: C.cream, theme: 'light', body });
 }
 
+function simpleContactFormPost() {
+  const body = `
+    ${badge(72, 190, 'FORMULÁRIO DE CONTATO')}
+    ${textLines(72, 330, ['Pedir orçamento', 'não deveria parecer', 'uma entrevista.'], { size: 64, weight: 800 })}
+    ${textLines(72, 585, ['Pergunte só o necessário para', 'começar uma boa conversa.'], { size: 27, weight: 400, gap: 1.5, fill: '#516259' })}
+    <g transform="translate(620 610) rotate(3 205 350) scale(.88)" filter="url(#shadow)">
+      <rect width="410" height="700" rx="45" fill="white"/>
+      <rect x="34" y="34" width="150" height="34" rx="17" fill="${C.mint}"/>
+      <text x="109" y="57" text-anchor="middle" font-family="DejaVu Sans" font-size="14" font-weight="800" fill="${C.green}">FALE COM A GENTE</text>
+      <text x="34" y="120" font-family="DejaVu Sans" font-size="27" font-weight="800" fill="${C.ink}">Vamos começar?</text>
+      <text x="34" y="153" font-family="DejaVu Sans" font-size="16" fill="#64736B">Conte brevemente o que precisa.</text>
+      <text x="34" y="210" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="${C.ink}">Seu nome</text>
+      <rect x="34" y="228" width="342" height="58" rx="14" fill="#F2F4EF" stroke="${C.line}"/>
+      <text x="34" y="332" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="${C.ink}">WhatsApp</text>
+      <rect x="34" y="350" width="342" height="58" rx="14" fill="#F2F4EF" stroke="${C.line}"/>
+      <text x="34" y="454" font-family="DejaVu Sans" font-size="15" font-weight="700" fill="${C.ink}">Como podemos ajudar?</text>
+      <rect x="34" y="472" width="342" height="88" rx="14" fill="#F2F4EF" stroke="${C.line}"/>
+      <rect x="34" y="598" width="342" height="68" rx="34" fill="${C.deep}"/>
+      <text x="205" y="641" text-anchor="middle" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="white">ENVIAR PEDIDO</text>
+    </g>
+    <g transform="translate(72 790)">
+      <rect width="430" height="330" rx="42" fill="${C.deep}"/>
+      <g transform="translate(38 40)"><circle cx="25" cy="25" r="25" fill="${C.lime}"/><path d="M14 25l8 8 17-20" fill="none" stroke="${C.ink}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="72" y="19" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="white">Só o essencial</text><text x="72" y="47" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".65">cada pergunta tem um motivo</text></g>
+      <g transform="translate(38 130)"><circle cx="25" cy="25" r="25" fill="${C.cyan}" opacity=".45"/><path d="M15 25h20M25 15v20" stroke="white" stroke-width="5" stroke-linecap="round"/><text x="72" y="19" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="white">Rótulos claros</text><text x="72" y="47" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".65">sem adivinhação no preenchimento</text></g>
+      <g transform="translate(38 220)"><circle cx="25" cy="25" r="25" fill="${C.orange}" opacity=".85"/><path d="M15 25h20" stroke="white" stroke-width="5" stroke-linecap="round"/><text x="72" y="19" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="white">Próximo passo visível</text><text x="72" y="47" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".65">o cliente sabe o que acontece</text></g>
+    </g>`;
+  return canvas({ background: C.cream, theme: 'light', body });
+}
+
+function cookieChoicesPost() {
+  const body = `
+    ${badge(72, 190, 'PRIVACIDADE', { fill: C.lime, color: C.ink })}
+    ${textLines(72, 330, ['Cookies no site:', 'a escolha precisa', 'ser clara.'], { size: 67, weight: 800, fill: C.white })}
+    ${textLines(72, 585, ['Explique as finalidades e ofereça', 'controle de forma simples.'], { size: 27, weight: 400, gap: 1.5, fill: C.white, opacity: .78 })}
+    <g transform="translate(72 770)" filter="url(#shadow)">
+      <rect width="936" height="390" rx="46" fill="white"/>
+      <g transform="translate(48 50)">
+        <path d="M76 6a70 70 0 1070 70c-23 0-35-13-36-34-21 2-33-10-34-36z" fill="${C.yellow}"/>
+        <circle cx="48" cy="77" r="8" fill="${C.ink}"/><circle cx="82" cy="104" r="9" fill="${C.ink}"/><circle cx="104" cy="69" r="7" fill="${C.ink}"/>
+        <text x="190" y="45" font-family="DejaVu Sans" font-size="25" font-weight="800" fill="${C.ink}">Este site usa cookies</text>
+        <text x="190" y="82" font-family="DejaVu Sans" font-size="17" fill="#5D6C64">Entenda para que servem antes de escolher.</text>
+      </g>
+      <g transform="translate(48 205)">
+        <rect width="250" height="64" rx="32" fill="${C.deep}"/>
+        <text x="125" y="41" text-anchor="middle" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="white">ACEITAR</text>
+        <rect x="276" width="250" height="64" rx="32" fill="white" stroke="${C.deep}" stroke-width="3"/>
+        <text x="401" y="41" text-anchor="middle" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="${C.ink}">RECUSAR</text>
+        <rect x="552" width="288" height="64" rx="32" fill="${C.mint}"/>
+        <text x="696" y="41" text-anchor="middle" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="${C.green}">GERENCIAR OPÇÕES</text>
+      </g>
+      <g transform="translate(48 310)">
+        <circle cx="15" cy="15" r="15" fill="${C.lime}"/><path d="M8 15l5 5 10-12" fill="none" stroke="${C.ink}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="45" y="21" font-family="DejaVu Sans" font-size="16" font-weight="700" fill="${C.ink}">informação clara</text>
+        <circle cx="285" cy="15" r="15" fill="${C.cyan}" opacity=".48"/><path d="M278 15l5 5 10-12" fill="none" stroke="${C.ink}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="315" y="21" font-family="DejaVu Sans" font-size="16" font-weight="700" fill="${C.ink}">escolha disponível</text>
+        <circle cx="585" cy="15" r="15" fill="${C.orange}" opacity=".72"/><path d="M578 15l5 5 10-12" fill="none" stroke="${C.ink}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="615" y="21" font-family="DejaVu Sans" font-size="16" font-weight="700" fill="${C.ink}">controle acessível</text>
+      </g>
+    </g>`;
+  return canvas({ background: 'url(#darkGrad)', theme: 'dark', body });
+}
+
 function headlineVisualPost({
   badgeLabel = 'PRESENÇA DIGITAL',
   title = ['Seu negócio', 'merece destaque.'],
@@ -268,6 +330,8 @@ export const templateRegistry = Object.freeze({
   'conversion-map': conversionPost,
   'measurement-dashboard': measurementDashboardPost,
   'local-information': localInformationPost,
+  'simple-contact-form': simpleContactFormPost,
+  'cookie-choices': cookieChoicesPost,
   'headline-visual': headlineVisualPost
 });
 

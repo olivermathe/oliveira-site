@@ -19,6 +19,8 @@ Kit inicial para o perfil [@oliveira.sites.tech](https://www.instagram.com/olive
 10. `10-site-que-gera-contatos` — estrutura de uma página orientada à conversão.
 11. `11-medir-acoes-no-site` — mensuração de ações importantes para o negócio.
 12. `12-informacoes-locais-consistentes` — consistência entre site e presença local.
+13. `13-formulario-de-contato-simples` — formulário enxuto para iniciar conversas.
+14. `14-cookies-com-escolhas-claras` — transparência e controle sobre cookies.
 
 Todos os arquivos finais estão em **1080 × 1350 px**, proporção vertical **4:5**, prontos para o feed do Instagram. Os arquivos `.svg` são as fontes editáveis das artes e os arquivos `.jpg` são as versões para publicação.
 
