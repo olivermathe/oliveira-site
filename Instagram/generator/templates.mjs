@@ -289,6 +289,67 @@ function cookieChoicesPost() {
   return canvas({ background: 'url(#darkGrad)', theme: 'dark', body });
 }
 
+function ownDomainPost() {
+  const body = `
+    ${badge(72, 190, 'DOMÍNIO PRÓPRIO', { fill: C.lime, color: C.ink })}
+    ${textLines(72, 330, ['Sua marca merece', 'um endereço próprio.'], { size: 68, weight: 800, fill: C.white })}
+    ${textLines(72, 505, ['Um nome simples ajuda o cliente', 'a reconhecer e acessar seu site.'], { size: 27, weight: 400, gap: 1.5, fill: C.white, opacity: .78 })}
+    <g transform="translate(72 700)">
+      <rect width="936" height="430" rx="48" fill="#F9F8F2" filter="url(#shadow)"/>
+      <g transform="translate(45 45)">
+        <rect width="846" height="80" rx="40" fill="#EAEDE7"/>
+        <circle cx="42" cy="40" r="19" fill="none" stroke="${C.green}" stroke-width="6"/><path d="M55 53l18 18" stroke="${C.green}" stroke-width="6" stroke-linecap="round"/>
+        <text x="95" y="50" font-family="DejaVu Sans" font-size="24" font-weight="700" fill="${C.ink}">suaempresa.com.br</text>
+        <rect x="683" y="16" width="145" height="48" rx="24" fill="${C.lime}"/><text x="755" y="47" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.ink}">ACESSAR</text>
+      </g>
+      <g transform="translate(45 170)">
+        <rect width="255" height="205" rx="32" fill="${C.deep}"/>
+        <circle cx="56" cy="54" r="28" fill="${C.cyan}" opacity=".46"/>
+        <path d="M44 55h24M56 43v24" stroke="white" stroke-width="6" stroke-linecap="round"/>
+        <text x="32" y="116" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="white">Fácil de lembrar</text>
+        <text x="32" y="149" font-family="DejaVu Sans" font-size="16" fill="white" opacity=".65">curto, claro e ligado</text><text x="32" y="174" font-family="DejaVu Sans" font-size="16" fill="white" opacity=".65">ao nome do negócio</text>
+      </g>
+      <g transform="translate(325 170)">
+        <rect width="255" height="205" rx="32" fill="${C.mint}"/>
+        <circle cx="56" cy="54" r="28" fill="${C.lime}"/>
+        <path d="M42 54h28M47 45h18M52 36h8" stroke="${C.ink}" stroke-width="5" stroke-linecap="round"/>
+        <text x="32" y="116" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="${C.ink}">Nome consistente</text>
+        <text x="32" y="149" font-family="DejaVu Sans" font-size="16" fill="${C.ink}" opacity=".65">mesma identidade no</text><text x="32" y="174" font-family="DejaVu Sans" font-size="16" fill="${C.ink}" opacity=".65">site e na divulgação</text>
+      </g>
+      <g transform="translate(605 170)">
+        <rect width="286" height="205" rx="32" fill="${C.cyan}" opacity=".28"/>
+        <circle cx="56" cy="54" r="28" fill="${C.orange}" opacity=".88"/>
+        <path d="M42 54l10 10 20-24" fill="none" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="32" y="116" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="${C.ink}">Endereço oficial</text>
+        <text x="32" y="149" font-family="DejaVu Sans" font-size="16" fill="${C.ink}" opacity=".65">um ponto direto para</text><text x="32" y="174" font-family="DejaVu Sans" font-size="16" fill="${C.ink}" opacity=".65">conteúdo e contato</text>
+      </g>
+    </g>`;
+  return canvas({ background: 'url(#darkGrad)', theme: 'dark', body });
+}
+
+function authenticReviewsPost() {
+  const body = `
+    ${badge(72, 190, 'AVALIAÇÕES REAIS')}
+    ${textLines(72, 330, ['A experiência dos', 'clientes também', 'conta sua história.'], { size: 64, weight: 800 })}
+    ${textLines(72, 585, ['Depoimentos verdadeiros dão contexto', 'ao trabalho que sua empresa entrega.'], { size: 26, weight: 400, gap: 1.5, fill: '#516259' })}
+    <g transform="translate(590 680) rotate(4 200 220) scale(.88)" filter="url(#shadow)">
+      <rect width="410" height="365" rx="38" fill="${C.deep}"/>
+      <circle cx="65" cy="65" r="32" fill="${C.lime}"/><path d="M48 62h34M48 76h24" stroke="${C.ink}" stroke-width="6" stroke-linecap="round"/>
+      <text x="116" y="60" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="white">Experiência real</text>
+      <text x="116" y="87" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".6">cliente + serviço realizado</text>
+      <rect x="45" y="130" width="238" height="48" rx="24" fill="${C.yellow}"/><text x="164" y="161" text-anchor="middle" font-family="DejaVu Sans" font-size="15" font-weight="800" fill="${C.ink}">DEPOIMENTO AUTORIZADO</text>
+      <text x="45" y="225" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="white">Relato apresentado sem alterar</text><text x="45" y="259" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="white">o sentido original.</text>
+      <rect x="45" y="305" width="210" height="9" rx="4.5" fill="white" opacity=".18"/><rect x="45" y="327" width="145" height="9" rx="4.5" fill="white" opacity=".10"/>
+    </g>
+    <g transform="translate(72 760)">
+      <path d="M435 45C585 0 765 70 886 18" fill="none" stroke="${C.mint}" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0 35)"><rect width="465" height="125" rx="30" fill="white" filter="url(#shadow)"/><circle cx="60" cy="62" r="29" fill="${C.lime}"/><path d="M47 62l9 9 20-24" fill="none" stroke="${C.ink}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="110" y="55" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="${C.ink}">Use relatos verdadeiros</text><text x="110" y="85" font-family="DejaVu Sans" font-size="16" fill="#617068">sem inventar ou editar o sentido</text></g>
+      <g transform="translate(0 185)"><rect width="465" height="125" rx="30" fill="${C.deep}" filter="url(#shadow)"/><circle cx="60" cy="62" r="29" fill="${C.cyan}" opacity=".45"/><path d="M47 62h26M60 49v26" stroke="white" stroke-width="6" stroke-linecap="round"/><text x="110" y="55" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="white">Mostre contexto</text><text x="110" y="85" font-family="DejaVu Sans" font-size="16" fill="white" opacity=".62">serviço, fonte e autorização</text></g>
+      <g transform="translate(0 335)"><rect width="465" height="125" rx="30" fill="${C.mint}" filter="url(#shadow)"/><circle cx="60" cy="62" r="29" fill="${C.orange}" opacity=".82"/><path d="M45 55h30M45 69h22" stroke="white" stroke-width="6" stroke-linecap="round"/><text x="110" y="55" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="${C.ink}">Responda com atenção</text><text x="110" y="85" font-family="DejaVu Sans" font-size="16" fill="${C.ink}" opacity=".62">inclusive quando houver crítica</text></g>
+    </g>`;
+  return canvas({ background: C.cream, theme: 'light', body });
+}
+
 function headlineVisualPost({
   badgeLabel = 'PRESENÇA DIGITAL',
   title = ['Seu negócio', 'merece destaque.'],
@@ -332,6 +393,8 @@ export const templateRegistry = Object.freeze({
   'local-information': localInformationPost,
   'simple-contact-form': simpleContactFormPost,
   'cookie-choices': cookieChoicesPost,
+  'own-domain': ownDomainPost,
+  'authentic-reviews': authenticReviewsPost,
   'headline-visual': headlineVisualPost
 });
 

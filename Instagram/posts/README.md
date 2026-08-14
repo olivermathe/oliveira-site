@@ -21,6 +21,8 @@ Kit inicial para o perfil [@oliveira.sites.tech](https://www.instagram.com/olive
 12. `12-informacoes-locais-consistentes` — consistência entre site e presença local.
 13. `13-formulario-de-contato-simples` — formulário enxuto para iniciar conversas.
 14. `14-cookies-com-escolhas-claras` — transparência e controle sobre cookies.
+15. `15-dominio-proprio-para-a-marca` — domínio próprio como endereço oficial.
+16. `16-avaliacoes-reais-no-site` — uso responsável de avaliações e depoimentos.
 
 Todos os arquivos finais estão em **1080 × 1350 px**, proporção vertical **4:5**, prontos para o feed do Instagram. Os arquivos `.svg` são as fontes editáveis das artes e os arquivos `.jpg` são as versões para publicação.
 

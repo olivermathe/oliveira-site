@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#07120D" flood-opacity=".20"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0C2117"/><stop offset="1" stop-color="#244B35"/></linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF85"/><stop offset="1" stop-color="#8CCB58"/></linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+    <rect width="1080" height="1350" fill="#F7F4EA"/>
+
+
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk9saXZlaXJhIFNpdGVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+VW1hIG9saXZlaXJhIGVtIGZvcm1hIGRlIGPDqXJlYnJvIGNvbSBjb25leMO1ZXMgZGlnaXRhaXMuPC9kZXNjPgogIDxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjQ2NCIgaGVpZ2h0PSI0NjQiIHJ4PSIxMTIiIGZpbGw9IiM1NTZCMkYiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjQ5IDk5Yy0yNC0yNS02OC0xOC03OCAxNi0zMy04LTYwIDIxLTUxIDUzLTMwIDEyLTM1IDUxLTEwIDcwLTE3IDI5IDUgNjUgMzkgNjQgMTAgMzMgNTEgNDcgNzggMjUgMTYtMTMgMjYtMzMgMjktNTRWMTE5Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjYzIDk5YzI0LTI1IDY4LTE4IDc4IDE2IDMzLTggNjAgMjEgNTEgNTMgMzAgMTIgMzUgNTEgMTAgNzAgMTcgMjktNSA2NS0zOSA2NC0xMCAzMy01MSA0Ny03OCAyNS0xNi0xMy0yNi0zMy0yOS01NFYxMTkiLz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yNTYgMjc0djExMm0wLTg0LTUyLTQ1bTUyIDE4IDU0LTQ4bS01NCA5OS0zNiAzOG0zNi0yMyAzNCAzNSIvPgogICAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxMiIgZD0iTTIwNCAyNTd2LTMwbC0zMi0yN20xMzggMjd2LTMxbDMxLTI0bS0xMjktOC0zMS0yNW0xMTkgMzggMzQtMjlNMTYyIDI0MmgtMjhtMjQ0LTJoLTI4Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE0IiBkPSJNMjU2IDM4NmMtMjkgMTUtNTAgMzItNjYgNTRtNjYtNTRjMjggMTUgNTAgMzIgNjYgNTRtLTY2LTU0djU2Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiPgogICAgPGNpcmNsZSBjeD0iMTcyIiBjeT0iMjAwIiByPSIxMSIvPjxjaXJjbGUgY3g9IjE4MSIgY3k9IjEzOSIgcj0iMTEiLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIyNDIiIHI9IjExIi8+CiAgICA8Y2lyY2xlIGN4PSIzNDEiIGN5PSIxNzIiIHI9IjExIi8+PGNpcmNsZSBjeD0iMzEwIiBjeT0iMTk2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjM3OCIgY3k9IjI0MCIgcj0iMTEiLz4KICAgIDxwYXRoIGQ9Ik0xMDEgMzE5YzI3LTEyIDQ3LTYgNjEgMTUtMjcgMTItNDggNy02MS0xNVoiLz4KICAgIDxwYXRoIGQ9Ik0zNTAgMzM0YzE1LTIxIDM2LTI3IDYxLTE0LTE0IDIyLTM1IDI3LTYxIDE0WiIvPgogIDwvZz4KPC9zdmc+Cg==" x="72" y="66" width="64" height="64"/>
+    <text x="154" y="105" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#10231A">OLIVEIRA SITES</text>
+    <circle cx="1000" cy="98" r="5" fill="#B9E769"/>
+    <circle cx="978" cy="98" r="5" fill="#567A35" opacity=".75"/>
+    <circle cx="956" cy="98" r="5" fill="#10231A" opacity=".25"/>
+
+    <g transform="translate(72 190)"><rect width="224" height="42" rx="21" fill="#DDF4C7"/><text x="112" y="29" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="800" fill="#567A35">AVALIAÇÕES REAIS</text></g>
+    <text x="72" y="330" font-family="DejaVu Sans, sans-serif" font-size="64" font-weight="800" fill="#10231A" text-anchor="start" opacity="1"><tspan x="72" dy="0">A experiência dos</tspan><tspan x="72" dy="71.68">clientes também</tspan><tspan x="72" dy="71.68">conta sua história.</tspan></text>
+    <text x="72" y="585" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#516259" text-anchor="start" opacity="1"><tspan x="72" dy="0">Depoimentos verdadeiros dão contexto</tspan><tspan x="72" dy="39">ao trabalho que sua empresa entrega.</tspan></text>
+    <g transform="translate(590 680) rotate(4 200 220) scale(.88)" filter="url(#shadow)">
+      <rect width="410" height="365" rx="38" fill="#183426"/>
+      <circle cx="65" cy="65" r="32" fill="#B9E769"/><path d="M48 62h34M48 76h24" stroke="#10231A" stroke-width="6" stroke-linecap="round"/>
+      <text x="116" y="60" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="white">Experiência real</text>
+      <text x="116" y="87" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".6">cliente + serviço realizado</text>
+      <rect x="45" y="130" width="238" height="48" rx="24" fill="#FFD66B"/><text x="164" y="161" text-anchor="middle" font-family="DejaVu Sans" font-size="15" font-weight="800" fill="#10231A">DEPOIMENTO AUTORIZADO</text>
+      <text x="45" y="225" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="white">Relato apresentado sem alterar</text><text x="45" y="259" font-family="DejaVu Sans" font-size="21" font-weight="700" fill="white">o sentido original.</text>
+      <rect x="45" y="305" width="210" height="9" rx="4.5" fill="white" opacity=".18"/><rect x="45" y="327" width="145" height="9" rx="4.5" fill="white" opacity=".10"/>
+    </g>
+    <g transform="translate(72 760)">
+      <path d="M435 45C585 0 765 70 886 18" fill="none" stroke="#DDF4C7" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0 35)"><rect width="465" height="125" rx="30" fill="white" filter="url(#shadow)"/><circle cx="60" cy="62" r="29" fill="#B9E769"/><path d="M47 62l9 9 20-24" fill="none" stroke="#10231A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="110" y="55" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="#10231A">Use relatos verdadeiros</text><text x="110" y="85" font-family="DejaVu Sans" font-size="16" fill="#617068">sem inventar ou editar o sentido</text></g>
+      <g transform="translate(0 185)"><rect width="465" height="125" rx="30" fill="#183426" filter="url(#shadow)"/><circle cx="60" cy="62" r="29" fill="#67D7D0" opacity=".45"/><path d="M47 62h26M60 49v26" stroke="white" stroke-width="6" stroke-linecap="round"/><text x="110" y="55" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="white">Mostre contexto</text><text x="110" y="85" font-family="DejaVu Sans" font-size="16" fill="white" opacity=".62">serviço, fonte e autorização</text></g>
+      <g transform="translate(0 335)"><rect width="465" height="125" rx="30" fill="#DDF4C7" filter="url(#shadow)"/><circle cx="60" cy="62" r="29" fill="#FF9566" opacity=".82"/><path d="M45 55h30M45 69h22" stroke="white" stroke-width="6" stroke-linecap="round"/><text x="110" y="55" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="#10231A">Responda com atenção</text><text x="110" y="85" font-family="DejaVu Sans" font-size="16" fill="#10231A" opacity=".62">inclusive quando houver crítica</text></g>
+    </g>
+    <text x="72" y="1292" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="600" fill="#10231A" opacity=".78">@oliveira.sites.tech</text>
+  <rect x="910" y="1274" width="98" height="4" rx="2" fill="#B9E769"/>
+  </svg>
