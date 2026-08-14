@@ -80,6 +80,20 @@
       "slides": [
         { "file": "imagem", "template": "cookie-choices" }
       ]
+    },
+    {
+      "slug": "15-dominio-proprio-para-a-marca",
+      "title": "Domínio próprio para a marca",
+      "slides": [
+        { "file": "imagem", "template": "own-domain" }
+      ]
+    },
+    {
+      "slug": "16-avaliacoes-reais-no-site",
+      "title": "Avaliações reais no site",
+      "slides": [
+        { "file": "imagem", "template": "authentic-reviews" }
+      ]
     }
   ]
 }

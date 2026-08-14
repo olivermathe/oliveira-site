@@ -20,10 +20,10 @@ test('as artes não exibem identificadores internos', () => {
   }
 });
 
-test('a configuração declarativa possui onze conteúdos e quinze artes', async () => {
+test('a configuração declarativa possui treze conteúdos e dezessete artes', async () => {
   const contents = await listContents();
-  assert.equal(contents.length, 11);
-  assert.equal(contents.reduce((total, content) => total + content.artworks, 0), 15);
+  assert.equal(contents.length, 13);
+  assert.equal(contents.reduce((total, content) => total + content.artworks, 0), 17);
 });
 
 test('o template genérico aceita conteúdo sem criar um novo desenho', () => {
