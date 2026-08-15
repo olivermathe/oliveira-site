@@ -36,6 +36,16 @@ test('conteúdos publicados permanecem na pasta de arquivo', async () => {
   );
 });
 
+test('conteúdos sem diretório explícito são gerados na pasta de novos', async () => {
+  const contents = await listContents();
+  const newContents = contents.filter(({ slug }) => /^(1[2-6])-/.test(slug));
+  assert.equal(newContents.length, 5);
+  assert.equal(
+    newContents.every(({ directory, slug }) => directory === `novos/${slug}`),
+    true
+  );
+});
+
 test('o template genérico aceita conteúdo sem criar um novo desenho', () => {
   const svg = renderTemplate('headline-visual', {
     badgeLabel: 'TESTE',

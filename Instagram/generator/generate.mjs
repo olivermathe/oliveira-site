@@ -2,13 +2,16 @@ import { execFileSync } from 'node:child_process';
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { Resvg } from '@resvg/resvg-js';
 import { renderTemplate, templateRegistry } from './templates.mjs';
 import { C, dimensions } from './theme.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const postsRoot = path.join(here, '..', 'posts');
 const contentPath = path.join(here, 'content', 'series.json');
+
+function contentDirectory(content) {
+  return content.directory ?? path.posix.join('novos', content.slug);
+}
 
 function validateConfig(config) {
   if (!Array.isArray(config.contents) || config.contents.length === 0) {
@@ -26,7 +29,7 @@ function validateConfig(config) {
     }
     slugs.add(content.slug);
 
-    const directory = content.directory ?? content.slug;
+    const directory = contentDirectory(content);
     const output = path.resolve(postsRoot, directory);
     if (output === postsRoot || !output.startsWith(`${postsRoot}${path.sep}`)) {
       throw new Error(`Diretório inválido em ${content.slug}: ${directory}`);
@@ -78,7 +81,8 @@ function imageMagickCommand() {
 }
 
 async function renderArtwork(content, slide, convertCommand) {
-  const output = path.join(postsRoot, content.directory ?? content.slug);
+  const { Resvg } = await import('@resvg/resvg-js');
+  const output = path.join(postsRoot, contentDirectory(content));
   await mkdir(output, { recursive: true });
 
   const svg = renderTemplate(slide.template, slide.data ?? {}).replace(/[ \t]+$/gm, '');
@@ -118,10 +122,10 @@ export async function generate(selector) {
 export async function listContents() {
   const config = JSON.parse(await readFile(contentPath, 'utf8'));
   validateConfig(config);
-  return config.contents.map(({ slug, title, directory = slug, slides }) => ({
-    slug,
-    title,
-    directory,
-    artworks: slides.length
+  return config.contents.map((content) => ({
+    slug: content.slug,
+    title: content.title,
+    directory: contentDirectory(content),
+    artworks: content.slides.length
   }));
 }
