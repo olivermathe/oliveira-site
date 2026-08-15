@@ -15,14 +15,16 @@ Kit inicial para o perfil [@oliveira.sites.tech](https://www.instagram.com/olive
 9. `publicados/09-https-e-confianca` — segurança e percepção profissional.
 10. `publicados/10-site-que-gera-contatos` — estrutura de uma página orientada à conversão.
 11. `publicados/11-medir-acoes-no-site` — mensuração de ações importantes para o negócio.
+12. `publicados/12-informacoes-locais-consistentes` — consistência entre site e presença local.
 
 ## Aguardando publicação
 
-12. `novos/12-informacoes-locais-consistentes` — consistência entre site e presença local.
 13. `novos/13-formulario-de-contato-simples` — formulário enxuto para iniciar conversas.
 14. `novos/14-cookies-com-escolhas-claras` — transparência e controle sobre cookies.
 15. `novos/15-dominio-proprio-para-a-marca` — domínio próprio como endereço oficial.
 16. `novos/16-avaliacoes-reais-no-site` — uso responsável de avaliações e depoimentos.
+17. `novos/17-titulo-e-descricao-na-busca` — apresentação clara nos resultados de busca.
+18. `novos/18-imagens-leves-site-rapido` — imagens profissionais com carregamento eficiente.
 
 Todos os arquivos finais estão em **1080 × 1350 px**, proporção vertical **4:5**, prontos para o feed do Instagram. Os arquivos `.svg` são as fontes editáveis das artes e os arquivos `.jpg` são as versões para publicação.
 

@@ -350,6 +350,68 @@ function authenticReviewsPost() {
   return canvas({ background: C.cream, theme: 'light', body });
 }
 
+function searchResultPreviewPost() {
+  const body = `
+    ${badge(72, 190, 'ANTES DO CLIQUE', { fill: C.lime, color: C.ink })}
+    ${textLines(72, 330, ['O resultado da busca', 'já apresenta', 'a sua marca.'], { size: 64, weight: 800, fill: C.white })}
+    ${textLines(72, 570, ['Título e resumo ajudam a explicar', 'o que a pessoa encontrará na página.'], { size: 26, weight: 400, gap: 1.5, fill: C.white, opacity: .78 })}
+    <g transform="translate(72 725)" filter="url(#shadow)">
+      <rect width="936" height="425" rx="46" fill="#F9F8F2"/>
+      <g transform="translate(42 38)">
+        <rect width="852" height="66" rx="33" fill="#E9EDE8"/>
+        <circle cx="38" cy="33" r="15" fill="none" stroke="${C.green}" stroke-width="5"/>
+        <path d="M49 44l14 14" stroke="${C.green}" stroke-width="5" stroke-linecap="round"/>
+        <text x="82" y="42" font-family="DejaVu Sans" font-size="20" font-weight="600" fill="${C.ink}">site para negócio local</text>
+      </g>
+      <g transform="translate(54 145)">
+        <circle cx="24" cy="24" r="24" fill="${C.deep}"/>
+        <path d="M14 25l8 8 15-19" fill="none" stroke="${C.lime}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="64" y="20" font-family="DejaVu Sans" font-size="15" fill="#52645A">suaempresa.com.br</text>
+        <text x="64" y="62" font-family="DejaVu Sans" font-size="27" font-weight="800" fill="#2456A6">Serviço claro para quem está procurando</text>
+        <text x="64" y="102" font-family="DejaVu Sans" font-size="18" fill="#46564E">Um resumo útil explica a página antes do acesso</text>
+        <text x="64" y="130" font-family="DejaVu Sans" font-size="18" fill="#46564E">e mantém a promessa alinhada ao conteúdo.</text>
+      </g>
+      <g transform="translate(54 318)">
+        <rect width="245" height="54" rx="27" fill="${C.mint}"/>
+        <text x="122" y="35" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.green}">CLARO E ESPECÍFICO</text>
+        <rect x="268" width="250" height="54" rx="27" fill="${C.cyan}" opacity=".28"/>
+        <text x="393" y="35" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.ink}">ÚNICO POR PÁGINA</text>
+        <rect x="541" width="285" height="54" rx="27" fill="${C.yellow}" opacity=".72"/>
+        <text x="683" y="35" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.ink}">COERENTE COM O SITE</text>
+      </g>
+    </g>`;
+  return canvas({ background: 'url(#darkGrad)', theme: 'dark', body });
+}
+
+function optimizedImagesPost() {
+  const body = `
+    ${badge(72, 190, 'IMAGENS + DESEMPENHO')}
+    ${textLines(72, 330, ['Fotos bonitas não', 'precisam deixar', 'o site pesado.'], { size: 64, weight: 800 })}
+    ${textLines(72, 570, ['A imagem certa preserva o visual', 'sem desperdiçar dados no celular.'], { size: 26, weight: 400, gap: 1.5, fill: '#516259' })}
+    <g transform="translate(72 725)">
+      <g filter="url(#shadow)">
+        <rect width="370" height="425" rx="44" fill="${C.deep}"/>
+        <rect x="34" y="34" width="302" height="225" rx="28" fill="${C.cyan}" opacity=".30"/>
+        <circle cx="270" cy="88" r="35" fill="${C.yellow}"/>
+        <path d="M62 224l78-92 62 66 48-54 58 80z" fill="${C.lime}" opacity=".88"/>
+        <path d="M62 224l78-92 62 66" fill="none" stroke="${C.white}" stroke-width="8" stroke-linejoin="round" opacity=".7"/>
+        <rect x="34" y="292" width="215" height="14" rx="7" fill="white" opacity=".9"/>
+        <rect x="34" y="325" width="274" height="10" rx="5" fill="white" opacity=".28"/>
+        <rect x="34" y="350" width="195" height="10" rx="5" fill="white" opacity=".18"/>
+        <g transform="translate(265 346)"><circle cx="35" cy="35" r="35" fill="${C.lime}"/><path d="M20 35l10 10 21-25" fill="none" stroke="${C.ink}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g>
+      </g>
+      <g transform="translate(410 0)">
+        <rect width="526" height="425" rx="44" fill="white" filter="url(#shadow)"/>
+        <g transform="translate(38 45)"><circle cx="29" cy="29" r="29" fill="${C.lime}"/><path d="M15 29h28M21 20h16M25 11h8" stroke="${C.ink}" stroke-width="5" stroke-linecap="round"/><text x="78" y="22" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="${C.ink}">Tamanho adequado</text><text x="78" y="49" font-family="DejaVu Sans" font-size="15" fill="#637168">para cada tipo de tela</text></g>
+        <g transform="translate(38 150)"><circle cx="29" cy="29" r="29" fill="${C.cyan}" opacity=".42"/><path d="M16 29h26M20 20h18M24 38h10" stroke="${C.ink}" stroke-width="5" stroke-linecap="round"/><text x="78" y="22" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="${C.ink}">Formato e compressão</text><text x="78" y="49" font-family="DejaVu Sans" font-size="15" fill="#637168">equilíbrio entre peso e nitidez</text></g>
+        <g transform="translate(38 255)"><circle cx="29" cy="29" r="29" fill="${C.orange}" opacity=".78"/><path d="M16 29l9 9 19-23" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="78" y="22" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="${C.ink}">Carregamento inteligente</text><text x="78" y="49" font-family="DejaVu Sans" font-size="15" fill="#637168">prioridade para o que aparece primeiro</text></g>
+        <rect x="38" y="350" width="450" height="48" rx="24" fill="${C.mint}"/>
+        <text x="263" y="381" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.green}">VISUAL PROFISSIONAL, SEM EXCESSO</text>
+      </g>
+    </g>`;
+  return canvas({ background: C.cream, theme: 'light', body });
+}
+
 function headlineVisualPost({
   badgeLabel = 'PRESENÇA DIGITAL',
   title = ['Seu negócio', 'merece destaque.'],
@@ -395,6 +457,8 @@ export const templateRegistry = Object.freeze({
   'cookie-choices': cookieChoicesPost,
   'own-domain': ownDomainPost,
   'authentic-reviews': authenticReviewsPost,
+  'search-result-preview': searchResultPreviewPost,
+  'optimized-images': optimizedImagesPost,
   'headline-visual': headlineVisualPost
 });
 

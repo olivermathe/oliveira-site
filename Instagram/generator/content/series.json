@@ -70,6 +70,7 @@
     },
     {
       "slug": "12-informacoes-locais-consistentes",
+      "directory": "publicados/12-informacoes-locais-consistentes",
       "title": "Informações locais consistentes",
       "slides": [
         { "file": "imagem", "template": "local-information" }
@@ -101,6 +102,20 @@
       "title": "Avaliações reais no site",
       "slides": [
         { "file": "imagem", "template": "authentic-reviews" }
+      ]
+    },
+    {
+      "slug": "17-titulo-e-descricao-na-busca",
+      "title": "Título e descrição nos resultados de busca",
+      "slides": [
+        { "file": "imagem", "template": "search-result-preview" }
+      ]
+    },
+    {
+      "slug": "18-imagens-leves-site-rapido",
+      "title": "Imagens bonitas com carregamento eficiente",
+      "slides": [
+        { "file": "imagem", "template": "optimized-images" }
       ]
     }
   ]
