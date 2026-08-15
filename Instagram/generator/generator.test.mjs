@@ -26,6 +26,26 @@ test('a configuração declarativa possui treze conteúdos e dezessete artes', a
   assert.equal(contents.reduce((total, content) => total + content.artworks, 0), 17);
 });
 
+test('conteúdos publicados permanecem na pasta de arquivo', async () => {
+  const contents = await listContents();
+  const published = contents.filter(({ slug }) => /^(0[4-9]|1[01])-/.test(slug));
+  assert.equal(published.length, 8);
+  assert.equal(
+    published.every(({ directory, slug }) => directory === `publicados/${slug}`),
+    true
+  );
+});
+
+test('conteúdos sem diretório explícito são gerados na pasta de novos', async () => {
+  const contents = await listContents();
+  const newContents = contents.filter(({ slug }) => /^(1[2-6])-/.test(slug));
+  assert.equal(newContents.length, 5);
+  assert.equal(
+    newContents.every(({ directory, slug }) => directory === `novos/${slug}`),
+    true
+  );
+});
+
 test('o template genérico aceita conteúdo sem criar um novo desenho', () => {
   const svg = renderTemplate('headline-visual', {
     badgeLabel: 'TESTE',

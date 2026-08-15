@@ -50,6 +50,8 @@ Inclua o conteúdo em `content/series.json` e escolha um template. O template `h
 }
 ```
 
+Por padrão, o gerador salva toda nova arte em `Instagram/posts/novos/<slug>`. Para manter um conteúdo já publicado no arquivo sem alterar seu slug de seleção, informe também `"directory": "publicados/<slug>"`.
+
 Os valores disponíveis para `visual` são `browser` e `phone`. Novos componentes podem ser adicionados em `components.mjs` sem duplicar a identidade visual ou a lógica de exportação.
 
 ## Dependências externas
