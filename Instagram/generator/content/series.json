@@ -2,6 +2,7 @@
   "contents": [
     {
       "slug": "04-site-no-celular",
+      "directory": "publicados/04-site-no-celular",
       "title": "Experiência do site no celular",
       "slides": [
         { "file": "imagem", "template": "mobile-experience" }
@@ -9,6 +10,7 @@
     },
     {
       "slug": "05-anuncio-e-landing-page",
+      "directory": "publicados/05-anuncio-e-landing-page",
       "title": "Anúncios e landing pages",
       "slides": [
         { "file": "01-capa", "template": "ad-flow-cover" },
@@ -20,6 +22,7 @@
     },
     {
       "slug": "06-como-o-google-entende-seu-site",
+      "directory": "publicados/06-como-o-google-entende-seu-site",
       "title": "Como o Google entende um site",
       "slides": [
         { "file": "imagem", "template": "search-checklist" }
@@ -27,6 +30,7 @@
     },
     {
       "slug": "07-instagram-e-site",
+      "directory": "publicados/07-instagram-e-site",
       "title": "Instagram e site",
       "slides": [
         { "file": "imagem", "template": "social-to-site" }
@@ -34,6 +38,7 @@
     },
     {
       "slug": "08-acessibilidade-digital",
+      "directory": "publicados/08-acessibilidade-digital",
       "title": "Acessibilidade digital",
       "slides": [
         { "file": "imagem", "template": "accessibility-grid" }
@@ -41,6 +46,7 @@
     },
     {
       "slug": "09-https-e-confianca",
+      "directory": "publicados/09-https-e-confianca",
       "title": "HTTPS e confiança",
       "slides": [
         { "file": "imagem", "template": "secure-browser" }
@@ -48,6 +54,7 @@
     },
     {
       "slug": "10-site-que-gera-contatos",
+      "directory": "publicados/10-site-que-gera-contatos",
       "title": "Site orientado a contatos",
       "slides": [
         { "file": "imagem", "template": "conversion-map" }
@@ -55,6 +62,7 @@
     },
     {
       "slug": "11-medir-acoes-no-site",
+      "directory": "publicados/11-medir-acoes-no-site",
       "title": "Mensuração de ações importantes no site",
       "slides": [
         { "file": "imagem", "template": "measurement-dashboard" }

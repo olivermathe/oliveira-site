@@ -16,6 +16,7 @@ function validateConfig(config) {
   }
 
   const slugs = new Set();
+  const directories = new Set();
   for (const content of config.contents) {
     if (!content.slug || !content.title || !Array.isArray(content.slides) || content.slides.length === 0) {
       throw new Error(`Conteúdo inválido: ${JSON.stringify(content)}`);
@@ -24,6 +25,16 @@ function validateConfig(config) {
       throw new Error(`Slug duplicado: ${content.slug}`);
     }
     slugs.add(content.slug);
+
+    const directory = content.directory ?? content.slug;
+    const output = path.resolve(postsRoot, directory);
+    if (output === postsRoot || !output.startsWith(`${postsRoot}${path.sep}`)) {
+      throw new Error(`Diretório inválido em ${content.slug}: ${directory}`);
+    }
+    if (directories.has(output)) {
+      throw new Error(`Diretório duplicado em ${content.slug}: ${directory}`);
+    }
+    directories.add(output);
 
     const files = new Set();
     for (const slide of content.slides) {
@@ -67,7 +78,7 @@ function imageMagickCommand() {
 }
 
 async function renderArtwork(content, slide, convertCommand) {
-  const output = path.join(postsRoot, content.slug);
+  const output = path.join(postsRoot, content.directory ?? content.slug);
   await mkdir(output, { recursive: true });
 
   const svg = renderTemplate(slide.template, slide.data ?? {}).replace(/[ \t]+$/gm, '');
@@ -107,5 +118,10 @@ export async function generate(selector) {
 export async function listContents() {
   const config = JSON.parse(await readFile(contentPath, 'utf8'));
   validateConfig(config);
-  return config.contents.map(({ slug, title, slides }) => ({ slug, title, artworks: slides.length }));
+  return config.contents.map(({ slug, title, directory = slug, slides }) => ({
+    slug,
+    title,
+    directory,
+    artworks: slides.length
+  }));
 }
