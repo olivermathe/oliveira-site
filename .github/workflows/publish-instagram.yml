@@ -1,0 +1,252 @@
+name: Publish Oliveira Instagram post
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Instagram/posts/novos/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Validate account and caption without publishing
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: instagram-publication-oliveira-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GRAPH_API_VERSION: ${{ vars.INSTAGRAM_GRAPH_API_VERSION || 'v23.0' }}
+      INSTAGRAM_API_BASE: https://graph.instagram.com
+      INSTAGRAM_USERNAME: oliveira.sites.tech
+      STORAGE_BUCKET: ${{ vars.INSTAGRAM_STORAGE_BUCKET || 'oliveira-sites.firebasestorage.app' }}
+      INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - id: auth
+        uses: google-github-actions/auth@v3
+        with:
+          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_OLIVEIRA_SITES }}
+          create_credentials_file: true
+
+      - uses: google-github-actions/setup-gcloud@v3
+
+      - name: Select and validate first pending post
+        id: post
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ -n "$INSTAGRAM_ACCESS_TOKEN" ]] || { echo "::error::INSTAGRAM_ACCESS_TOKEN is not configured."; exit 1; }
+          mapfile -t pending < <(find Instagram/posts/novos -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | awk '/^[0-9]+-/' | sort -V)
+          if (( ${#pending[@]} == 0 )); then
+            echo "has_post=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          slug="${pending[0]}"
+          post_dir="Instagram/posts/novos/$slug"
+          metadata="$post_dir/post.md"
+          [[ -f "$metadata" ]] || { echo "::error::Post must include post.md."; exit 1; }
+          images_file="$RUNNER_TEMP/post-images.txt"
+          : > "$images_file"
+          if [[ -f "$post_dir/imagem.jpg" ]]; then
+            printf '%s\n' "$post_dir/imagem.jpg" >> "$images_file"
+          else
+            mapfile -t numbered_images < <(find "$post_dir" -maxdepth 1 -type f -printf '%f\n' | awk '/^[0-9]+-.*\.jpg$/' | sort -V)
+            (( ${#numbered_images[@]} > 0 )) || { echo "::error::Post must include imagem.jpg or numbered JPG carousel images."; exit 1; }
+            for filename in "${numbered_images[@]}"; do
+              printf '%s/%s\n' "$post_dir" "$filename" >> "$images_file"
+            done
+          fi
+          mapfile -t images < "$images_file"
+          (( ${#images[@]} <= 10 )) || { echo "::error::Instagram carousels support at most 10 images."; exit 1; }
+          for image in "${images[@]}"; do
+            [[ "$(file --brief --mime-type "$image")" == "image/jpeg" ]] || { echo "::error::$image must be a JPEG."; exit 1; }
+          done
+          media_type="IMAGE"
+          (( ${#images[@]} == 1 )) || media_type="CAROUSEL"
+          python3 - "$metadata" "$RUNNER_TEMP/caption.txt" <<'PY'
+          import re, sys
+          from pathlib import Path
+          source = Path(sys.argv[1]).read_text(encoding="utf-8")
+          def section(name):
+              match = re.search(rf'^## {re.escape(name)}\s*$\n(.*?)(?=^##\s|\Z)', source, re.MULTILINE | re.DOTALL)
+              return match.group(1).strip() if match else ""
+          caption, hashtags = section("Legenda pronta"), section("Hashtags")
+          if not caption or not hashtags:
+              raise SystemExit("post.md must contain Legenda pronta and Hashtags sections")
+          result = f"{caption}\n\n{hashtags.replace(chr(96), '').strip()}".strip()
+          if len(result) > 2200:
+              raise SystemExit("Caption exceeds Instagram's 2200-character limit")
+          Path(sys.argv[2]).write_text(result, encoding="utf-8")
+          PY
+          echo "has_post=true" >> "$GITHUB_OUTPUT"
+          echo "slug=$slug" >> "$GITHUB_OUTPUT"
+          echo "post_dir=$post_dir" >> "$GITHUB_OUTPUT"
+          echo "images_file=$images_file" >> "$GITHUB_OUTPUT"
+          echo "image_count=${#images[@]}" >> "$GITHUB_OUTPUT"
+          echo "media_type=$media_type" >> "$GITHUB_OUTPUT"
+          echo "caption_file=$RUNNER_TEMP/caption.txt" >> "$GITHUB_OUTPUT"
+
+      - name: Resolve and verify Instagram account
+        if: steps.post.outputs.has_post == 'true'
+        id: account
+        shell: bash
+        run: |
+          set -euo pipefail
+          me="$(curl --fail-with-body --silent --show-error --get "$INSTAGRAM_API_BASE/$GRAPH_API_VERSION/me" --data-urlencode "fields=user_id,username" --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+          account="$(python3 - "$INSTAGRAM_USERNAME" "$me" <<'PY'
+          import json, sys
+          expected, raw = sys.argv[1:]
+          data = json.loads(raw)
+          if data.get("username") == expected and data.get("user_id"):
+              print(json.dumps({"id": data["user_id"]}))
+          PY
+          )"
+          [[ -n "$account" ]] || { echo "::error::Token did not resolve @$INSTAGRAM_USERNAME."; exit 1; }
+          echo "id=$(python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])' <<< "$account")" >> "$GITHUB_OUTPUT"
+
+      - name: Check idempotency
+        if: steps.post.outputs.has_post == 'true'
+        id: idempotency
+        shell: bash
+        env:
+          ACCOUNT_ID: ${{ steps.account.outputs.id }}
+          CAPTION_FILE: ${{ steps.post.outputs.caption_file }}
+        run: |
+          set -euo pipefail
+          media="$(curl --fail-with-body --silent --show-error --get "$INSTAGRAM_API_BASE/$GRAPH_API_VERSION/$ACCOUNT_ID/media" --data-urlencode "fields=id,caption" --data-urlencode "limit=100" --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+          existing="$(python3 - "$CAPTION_FILE" "$media" <<'PY'
+          import json, sys
+          from pathlib import Path
+          caption = Path(sys.argv[1]).read_text(encoding="utf-8")
+          print("true" if any(item.get("caption") == caption for item in json.loads(sys.argv[2]).get("data", [])) else "false")
+          PY
+          )"
+          echo "already_published=$existing" >> "$GITHUB_OUTPUT"
+
+      - name: Upload temporary media and create signed URLs
+        if: steps.post.outputs.has_post == 'true' && steps.idempotency.outputs.already_published != 'true' && inputs.dry_run != true
+        id: media
+        shell: bash
+        env:
+          IMAGES_FILE: ${{ steps.post.outputs.images_file }}
+          IMAGE_COUNT: ${{ steps.post.outputs.image_count }}
+          SLUG: ${{ steps.post.outputs.slug }}
+          CREDENTIALS_FILE: ${{ steps.auth.outputs.credentials_file_path }}
+        run: |
+          set -euo pipefail
+          upload_manifest="$RUNNER_TEMP/uploaded-media.tsv"
+          object_manifest="$RUNNER_TEMP/uploaded-objects.txt"
+          : > "$upload_manifest"
+          : > "$object_manifest"
+          index=0
+          while IFS= read -r image; do
+            ((index += 1))
+            filename="$(basename "$image")"
+            object="instagram-publication-tmp/$GITHUB_RUN_ID/$GITHUB_RUN_ATTEMPT/$SLUG/$index-$filename"
+            gcloud storage cp "$image" "gs://$STORAGE_BUCKET/$object" --content-type=image/jpeg --quiet
+            printf '%s\n' "$object" >> "$object_manifest"
+            image_url="$(gcloud storage sign-url "gs://$STORAGE_BUCKET/$object" --duration=20m --private-key-file="$CREDENTIALS_FILE" --format='value(signed_url)' --quiet)"
+            [[ -n "$image_url" ]] || { echo "::error::Unable to create signed URL for $filename."; exit 1; }
+            printf '%s\t%s\n' "$object" "$image_url" >> "$upload_manifest"
+          done < "$IMAGES_FILE"
+          [[ "$index" == "$IMAGE_COUNT" ]] || { echo "::error::Not all post images were uploaded."; exit 1; }
+          echo "uploaded=true" >> "$GITHUB_OUTPUT"
+          echo "manifest=$upload_manifest" >> "$GITHUB_OUTPUT"
+
+      - name: Create, wait for, and publish Instagram media
+        if: steps.post.outputs.has_post == 'true' && steps.idempotency.outputs.already_published != 'true' && inputs.dry_run != true
+        id: publish
+        shell: bash
+        env:
+          ACCOUNT_ID: ${{ steps.account.outputs.id }}
+          CAPTION_FILE: ${{ steps.post.outputs.caption_file }}
+          MEDIA_TYPE: ${{ steps.post.outputs.media_type }}
+          UPLOAD_MANIFEST: ${{ steps.media.outputs.manifest }}
+        run: |
+          set -euo pipefail
+          wait_for_container() {
+            local container_id="$1"
+            local status status_code=""
+            for attempt in {1..30}; do
+              status="$(curl --fail-with-body --silent --show-error --get "$INSTAGRAM_API_BASE/$GRAPH_API_VERSION/$container_id" --data-urlencode "fields=status_code" --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+              status_code="$(python3 -c 'import json,sys; print(json.load(sys.stdin).get("status_code", ""))' <<< "$status")"
+              [[ "$status_code" == "FINISHED" ]] && return 0
+              [[ "$status_code" != "ERROR" && "$status_code" != "EXPIRED" ]] || { echo "::error::Instagram rejected media container $container_id."; return 1; }
+              sleep 10
+            done
+            echo "::error::Timed out waiting for Instagram container $container_id."
+            return 1
+          }
+          if [[ "$MEDIA_TYPE" == "IMAGE" ]]; then
+            IFS=$'\t' read -r _ image_url < "$UPLOAD_MANIFEST"
+            create="$(curl --fail-with-body --silent --show-error -X POST "$INSTAGRAM_API_BASE/$GRAPH_API_VERSION/$ACCOUNT_ID/media" --data-urlencode "image_url=$image_url" --data-urlencode "caption<$CAPTION_FILE" --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+            container_id="$(python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])' <<< "$create")"
+            wait_for_container "$container_id"
+          else
+            children=()
+            while IFS=$'\t' read -r _ image_url; do
+              child="$(curl --fail-with-body --silent --show-error -X POST "$INSTAGRAM_API_BASE/$GRAPH_API_VERSION/$ACCOUNT_ID/media" --data-urlencode "image_url=$image_url" --data-urlencode "is_carousel_item=true" --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+              child_id="$(python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])' <<< "$child")"
+              wait_for_container "$child_id"
+              children+=("$child_id")
+            done < "$UPLOAD_MANIFEST"
+            (( ${#children[@]} >= 2 )) || { echo "::error::A carousel requires at least two processed images."; exit 1; }
+            children_csv="$(IFS=,; echo "${children[*]}")"
+            create="$(curl --fail-with-body --silent --show-error -X POST "$INSTAGRAM_API_BASE/$GRAPH_API_VERSION/$ACCOUNT_ID/media" --data-urlencode "media_type=CAROUSEL" --data-urlencode "children=$children_csv" --data-urlencode "caption<$CAPTION_FILE" --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+            container_id="$(python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])' <<< "$create")"
+            wait_for_container "$container_id"
+          fi
+          published="$(curl --fail-with-body --silent --show-error -X POST "$INSTAGRAM_API_BASE/$GRAPH_API_VERSION/$ACCOUNT_ID/media_publish" --data-urlencode "creation_id=$container_id" --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+          media_id="$(python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])' <<< "$published")"
+          verification="$(curl --fail-with-body --silent --show-error --get "$INSTAGRAM_API_BASE/$GRAPH_API_VERSION/$media_id" --data-urlencode "fields=username" --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+          [[ "$(python3 -c 'import json,sys; print(json.load(sys.stdin).get("username", ""))' <<< "$verification")" == "$INSTAGRAM_USERNAME" ]] || { echo "::error::Published media account validation failed."; exit 1; }
+          echo "published=true" >> "$GITHUB_OUTPUT"
+
+      - name: Remove temporary media
+        if: always()
+        id: cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          object_manifest="$RUNNER_TEMP/uploaded-objects.txt"
+          [[ -s "$object_manifest" ]] || exit 0
+          failed=false
+          while IFS= read -r object; do
+            if ! gcloud storage rm "gs://$STORAGE_BUCKET/$object" --quiet; then
+              echo "::error::Unable to remove temporary object $object."
+              failed=true
+            fi
+          done < "$object_manifest"
+          [[ "$failed" == "false" ]]
+
+      - name: Archive confirmed post
+        if: steps.post.outputs.has_post == 'true' && inputs.dry_run != true && (steps.idempotency.outputs.already_published == 'true' || (steps.cleanup.outcome == 'success' && steps.publish.outputs.published == 'true'))
+        shell: bash
+        env:
+          POST_DIR: ${{ steps.post.outputs.post_dir }}
+          SLUG: ${{ steps.post.outputs.slug }}
+        run: |
+          set -euo pipefail
+          destination="Instagram/posts/publicados/$SLUG"
+          [[ ! -e "$destination" ]] || { echo "::error::Archive destination already exists."; exit 1; }
+          mkdir -p Instagram/posts/publicados
+          git mv "$POST_DIR" "$destination"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(instagram): archive published post $SLUG"
+          git push origin HEAD:main
