@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#07120D" flood-opacity=".20"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0C2117"/><stop offset="1" stop-color="#244B35"/></linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF85"/><stop offset="1" stop-color="#8CCB58"/></linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+    <rect width="1080" height="1350" fill="#F7F4EA"/>
+
+
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk9saXZlaXJhIFNpdGVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+VW1hIG9saXZlaXJhIGVtIGZvcm1hIGRlIGPDqXJlYnJvIGNvbSBjb25leMO1ZXMgZGlnaXRhaXMuPC9kZXNjPgogIDxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjQ2NCIgaGVpZ2h0PSI0NjQiIHJ4PSIxMTIiIGZpbGw9IiM1NTZCMkYiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjQ5IDk5Yy0yNC0yNS02OC0xOC03OCAxNi0zMy04LTYwIDIxLTUxIDUzLTMwIDEyLTM1IDUxLTEwIDcwLTE3IDI5IDUgNjUgMzkgNjQgMTAgMzMgNTEgNDcgNzggMjUgMTYtMTMgMjYtMzMgMjktNTRWMTE5Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjYzIDk5YzI0LTI1IDY4LTE4IDc4IDE2IDMzLTggNjAgMjEgNTEgNTMgMzAgMTIgMzUgNTEgMTAgNzAgMTcgMjktNSA2NS0zOSA2NC0xMCAzMy01MSA0Ny03OCAyNS0xNi0xMy0yNi0zMy0yOS01NFYxMTkiLz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yNTYgMjc0djExMm0wLTg0LTUyLTQ1bTUyIDE4IDU0LTQ4bS01NCA5OS0zNiAzOG0zNi0yMyAzNCAzNSIvPgogICAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxMiIgZD0iTTIwNCAyNTd2LTMwbC0zMi0yN20xMzggMjd2LTMxbDMxLTI0bS0xMjktOC0zMS0yNW0xMTkgMzggMzQtMjlNMTYyIDI0MmgtMjhtMjQ0LTJoLTI4Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE0IiBkPSJNMjU2IDM4NmMtMjkgMTUtNTAgMzItNjYgNTRtNjYtNTRjMjggMTUgNTAgMzIgNjYgNTRtLTY2LTU0djU2Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiPgogICAgPGNpcmNsZSBjeD0iMTcyIiBjeT0iMjAwIiByPSIxMSIvPjxjaXJjbGUgY3g9IjE4MSIgY3k9IjEzOSIgcj0iMTEiLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIyNDIiIHI9IjExIi8+CiAgICA8Y2lyY2xlIGN4PSIzNDEiIGN5PSIxNzIiIHI9IjExIi8+PGNpcmNsZSBjeD0iMzEwIiBjeT0iMTk2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjM3OCIgY3k9IjI0MCIgcj0iMTEiLz4KICAgIDxwYXRoIGQ9Ik0xMDEgMzE5YzI3LTEyIDQ3LTYgNjEgMTUtMjcgMTItNDggNy02MS0xNVoiLz4KICAgIDxwYXRoIGQ9Ik0zNTAgMzM0YzE1LTIxIDM2LTI3IDYxLTE0LTE0IDIyLTM1IDI3LTYxIDE0WiIvPgogIDwvZz4KPC9zdmc+Cg==" x="72" y="66" width="64" height="64"/>
+    <text x="154" y="105" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#10231A">OLIVEIRA SITES</text>
+    <circle cx="1000" cy="98" r="5" fill="#B9E769"/>
+    <circle cx="978" cy="98" r="5" fill="#567A35" opacity=".75"/>
+    <circle cx="956" cy="98" r="5" fill="#10231A" opacity=".25"/>
+
+    <g transform="translate(72 190)"><rect width="224" height="42" rx="21" fill="#DDF4C7"/><text x="112" y="29" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="800" fill="#567A35">CAMINHO DE VOLTA</text></g>
+    <text x="72" y="330" font-family="DejaVu Sans, sans-serif" font-size="64" font-weight="800" fill="#10231A" text-anchor="start" opacity="1"><tspan x="72" dy="0">Um link quebrado</tspan><tspan x="72" dy="71.68">não precisa encerrar</tspan><tspan x="72" dy="71.68">a visita.</tspan></text>
+    <text x="72" y="575" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#516259" text-anchor="start" opacity="1"><tspan x="72" dy="0">Uma boa tela de erro explica o problema</tspan><tspan x="72" dy="39">e oferece rotas úteis para continuar.</tspan></text>
+    <g transform="translate(72 735)">
+      <rect width="936" height="415" rx="48" fill="#183426" filter="url(#shadow)"/>
+      <g transform="translate(48 42)"><text x="0" y="86" font-family="DejaVu Sans" font-size="92" font-weight="800" fill="#B9E769">404</text><text x="0" y="132" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="white">ENDEREÇO NÃO ENCONTRADO</text><text x="0" y="172" font-family="DejaVu Sans" font-size="16" fill="white" opacity=".62">A página mudou ou o link está incorreto.</text></g>
+      <path d="M360 72v275" stroke="white" stroke-width="2" opacity=".12"/>
+      <g transform="translate(405 55)"><rect width="475" height="120" rx="30" fill="#254D39"/><circle cx="60" cy="60" r="36" fill="#FF9566"/><path d="M46 60h28M60 46v28" stroke="white" stroke-width="7" stroke-linecap="round"/><text x="112" y="53" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="white">EXPLIQUE O PROBLEMA</text><text x="112" y="82" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".62">sem deixar a pessoa adivinhar</text></g>
+      <path d="M642 185v36" stroke="#67D7D0" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16"/>
+      <g transform="translate(405 230)"><rect width="475" height="120" rx="30" fill="#254D39"/><circle cx="60" cy="60" r="36" fill="#B9E769"/><path d="M45 60l10 10 22-26" fill="none" stroke="#10231A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="112" y="53" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="white">OFEREÇA ROTAS ÚTEIS</text><text x="112" y="82" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".62">início, serviços ou contato</text></g>
+      <rect x="48" y="285" width="250" height="68" rx="34" fill="white"/><text x="173" y="328" text-anchor="middle" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="#10231A">VOLTAR AO INÍCIO</text>
+    </g>
+    <text x="72" y="1292" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="600" fill="#10231A" opacity=".78">@oliveira.sites.tech</text>
+  <rect x="910" y="1274" width="98" height="4" rx="2" fill="#B9E769"/>
+  </svg>

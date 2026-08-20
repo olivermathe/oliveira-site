@@ -78,6 +78,7 @@
     },
     {
       "slug": "13-formulario-de-contato-simples",
+      "directory": "publicados/13-formulario-de-contato-simples",
       "title": "Formulário de contato simples",
       "slides": [
         { "file": "imagem", "template": "simple-contact-form" }
@@ -85,6 +86,7 @@
     },
     {
       "slug": "14-cookies-com-escolhas-claras",
+      "directory": "publicados/14-cookies-com-escolhas-claras",
       "title": "Cookies com escolhas claras",
       "slides": [
         { "file": "imagem", "template": "cookie-choices" }
@@ -92,6 +94,7 @@
     },
     {
       "slug": "15-dominio-proprio-para-a-marca",
+      "directory": "publicados/15-dominio-proprio-para-a-marca",
       "title": "Domínio próprio para a marca",
       "slides": [
         { "file": "imagem", "template": "own-domain" }
@@ -99,6 +102,7 @@
     },
     {
       "slug": "16-avaliacoes-reais-no-site",
+      "directory": "publicados/16-avaliacoes-reais-no-site",
       "title": "Avaliações reais no site",
       "slides": [
         { "file": "imagem", "template": "authentic-reviews" }
@@ -106,6 +110,7 @@
     },
     {
       "slug": "17-titulo-e-descricao-na-busca",
+      "directory": "publicados/17-titulo-e-descricao-na-busca",
       "title": "Título e descrição nos resultados de busca",
       "slides": [
         { "file": "imagem", "template": "search-result-preview" }
@@ -116,6 +121,22 @@
       "title": "Imagens bonitas com carregamento eficiente",
       "slides": [
         { "file": "imagem", "template": "optimized-images" }
+      ]
+    },
+    {
+      "slug": "19-paginas-de-servico-claras",
+      "title": "Páginas de serviço claras",
+      "slides": [
+        { "file": "01-encontre-o-servico", "template": "service-discovery" },
+        { "file": "02-conteudo-focado", "template": "focused-service-page" },
+        { "file": "03-o-que-explicar", "template": "service-page-checklist" }
+      ]
+    },
+    {
+      "slug": "20-pagina-404-que-reorienta",
+      "title": "Página 404 que reorienta",
+      "slides": [
+        { "file": "imagem", "template": "helpful-not-found" }
       ]
     }
   ]

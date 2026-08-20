@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#07120D" flood-opacity=".20"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0C2117"/><stop offset="1" stop-color="#244B35"/></linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF85"/><stop offset="1" stop-color="#8CCB58"/></linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+    <rect width="1080" height="1350" fill="url(#darkGrad)"/>
+    <rect width="1080" height="1350" fill="url(#grid)"/>
+
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk9saXZlaXJhIFNpdGVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+VW1hIG9saXZlaXJhIGVtIGZvcm1hIGRlIGPDqXJlYnJvIGNvbSBjb25leMO1ZXMgZGlnaXRhaXMuPC9kZXNjPgogIDxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjQ2NCIgaGVpZ2h0PSI0NjQiIHJ4PSIxMTIiIGZpbGw9IiM1NTZCMkYiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjQ5IDk5Yy0yNC0yNS02OC0xOC03OCAxNi0zMy04LTYwIDIxLTUxIDUzLTMwIDEyLTM1IDUxLTEwIDcwLTE3IDI5IDUgNjUgMzkgNjQgMTAgMzMgNTEgNDcgNzggMjUgMTYtMTMgMjYtMzMgMjktNTRWMTE5Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjYzIDk5YzI0LTI1IDY4LTE4IDc4IDE2IDMzLTggNjAgMjEgNTEgNTMgMzAgMTIgMzUgNTEgMTAgNzAgMTcgMjktNSA2NS0zOSA2NC0xMCAzMy01MSA0Ny03OCAyNS0xNi0xMy0yNi0zMy0yOS01NFYxMTkiLz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yNTYgMjc0djExMm0wLTg0LTUyLTQ1bTUyIDE4IDU0LTQ4bS01NCA5OS0zNiAzOG0zNi0yMyAzNCAzNSIvPgogICAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxMiIgZD0iTTIwNCAyNTd2LTMwbC0zMi0yN20xMzggMjd2LTMxbDMxLTI0bS0xMjktOC0zMS0yNW0xMTkgMzggMzQtMjlNMTYyIDI0MmgtMjhtMjQ0LTJoLTI4Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE0IiBkPSJNMjU2IDM4NmMtMjkgMTUtNTAgMzItNjYgNTRtNjYtNTRjMjggMTUgNTAgMzIgNjYgNTRtLTY2LTU0djU2Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiPgogICAgPGNpcmNsZSBjeD0iMTcyIiBjeT0iMjAwIiByPSIxMSIvPjxjaXJjbGUgY3g9IjE4MSIgY3k9IjEzOSIgcj0iMTEiLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIyNDIiIHI9IjExIi8+CiAgICA8Y2lyY2xlIGN4PSIzNDEiIGN5PSIxNzIiIHI9IjExIi8+PGNpcmNsZSBjeD0iMzEwIiBjeT0iMTk2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjM3OCIgY3k9IjI0MCIgcj0iMTEiLz4KICAgIDxwYXRoIGQ9Ik0xMDEgMzE5YzI3LTEyIDQ3LTYgNjEgMTUtMjcgMTItNDggNy02MS0xNVoiLz4KICAgIDxwYXRoIGQ9Ik0zNTAgMzM0YzE1LTIxIDM2LTI3IDYxLTE0LTE0IDIyLTM1IDI3LTYxIDE0WiIvPgogIDwvZz4KPC9zdmc+Cg==" x="72" y="66" width="64" height="64"/>
+    <text x="154" y="105" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">OLIVEIRA SITES</text>
+    <circle cx="1000" cy="98" r="5" fill="#B9E769"/>
+    <circle cx="978" cy="98" r="5" fill="#67D7D0" opacity=".75"/>
+    <circle cx="956" cy="98" r="5" fill="#FFFFFF" opacity=".25"/>
+
+    <g transform="translate(72 190)"><rect width="246" height="42" rx="21" fill="#B9E769"/><text x="123" y="29" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="800" fill="#10231A">PÁGINAS DE SERVIÇO</text></g>
+    <text x="72" y="330" font-family="DejaVu Sans, sans-serif" font-size="68" font-weight="800" fill="#FFFFFF" text-anchor="start" opacity="1"><tspan x="72" dy="0">Seu cliente quer</tspan><tspan x="72" dy="76.16000000000001">encontrar o</tspan><tspan x="72" dy="76.16000000000001">serviço certo.</tspan></text>
+    <text x="72" y="585" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#FFFFFF" text-anchor="start" opacity="0.78"><tspan x="72" dy="0">Organize cada solução para que ela</tspan><tspan x="72" dy="40.5">possa ser encontrada e entendida.</tspan></text>
+    <g transform="translate(72 755)">
+      <rect width="936" height="385" rx="48" fill="#F9F8F2" filter="url(#shadow)"/>
+      <g transform="translate(42 38)">
+        <rect width="852" height="64" rx="32" fill="#E9EDE8"/>
+        <circle cx="36" cy="32" r="15" fill="none" stroke="#567A35" stroke-width="5"/><path d="M47 43l15 15" stroke="#567A35" stroke-width="5" stroke-linecap="round"/>
+        <text x="80" y="41" font-family="DejaVu Sans" font-size="20" font-weight="600" fill="#10231A">serviço específico para minha empresa</text>
+      </g>
+      <path d="M468 125v52M468 177H170v32M468 177h298v32" fill="none" stroke="#A9B7AE" stroke-width="5" stroke-linecap="round"/>
+      <g transform="translate(42 210)"><rect width="255" height="125" rx="28" fill="#DDF4C7"/><text x="26" y="48" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="#10231A">SERVIÇO A</text><rect x="26" y="70" width="152" height="9" rx="4" fill="#10231A" opacity=".22"/><rect x="26" y="92" width="105" height="9" rx="4" fill="#10231A" opacity=".12"/></g>
+      <g transform="translate(340 196)" filter="url(#shadow)"><rect width="255" height="153" rx="30" fill="#B9E769"/><circle cx="214" cy="39" r="22" fill="#183426"/><path d="M203 39l8 8 15-18" fill="none" stroke="#B9E769" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="26" y="57" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="#10231A">SERVIÇO CERTO</text><text x="26" y="91" font-family="DejaVu Sans" font-size="15" fill="#10231A" opacity=".66">conteúdo específico</text><rect x="26" y="112" width="137" height="9" rx="4" fill="#10231A" opacity=".24"/></g>
+      <g transform="translate(639 210)"><rect width="255" height="125" rx="28" fill="#67D7D0" opacity=".28"/><text x="26" y="48" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="#10231A">SERVIÇO C</text><rect x="26" y="70" width="152" height="9" rx="4" fill="#10231A" opacity=".22"/><rect x="26" y="92" width="105" height="9" rx="4" fill="#10231A" opacity=".12"/></g>
+    </g>
+    <text x="72" y="1292" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" opacity=".78">@oliveira.sites.tech</text>
+  <rect x="910" y="1274" width="98" height="4" rx="2" fill="#B9E769"/>
+  </svg>

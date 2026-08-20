@@ -412,6 +412,78 @@ function optimizedImagesPost() {
   return canvas({ background: C.cream, theme: 'light', body });
 }
 
+function serviceDiscoveryPost() {
+  const body = `
+    ${badge(72, 190, 'PÁGINAS DE SERVIÇO', { fill: C.lime, color: C.ink })}
+    ${textLines(72, 330, ['Seu cliente quer', 'encontrar o', 'serviço certo.'], { size: 68, weight: 800, fill: C.white })}
+    ${textLines(72, 585, ['Organize cada solução para que ela', 'possa ser encontrada e entendida.'], { size: 27, weight: 400, gap: 1.5, fill: C.white, opacity: .78 })}
+    <g transform="translate(72 755)">
+      <rect width="936" height="385" rx="48" fill="#F9F8F2" filter="url(#shadow)"/>
+      <g transform="translate(42 38)">
+        <rect width="852" height="64" rx="32" fill="#E9EDE8"/>
+        <circle cx="36" cy="32" r="15" fill="none" stroke="${C.green}" stroke-width="5"/><path d="M47 43l15 15" stroke="${C.green}" stroke-width="5" stroke-linecap="round"/>
+        <text x="80" y="41" font-family="DejaVu Sans" font-size="20" font-weight="600" fill="${C.ink}">serviço específico para minha empresa</text>
+      </g>
+      <path d="M468 125v52M468 177H170v32M468 177h298v32" fill="none" stroke="${C.muted}" stroke-width="5" stroke-linecap="round"/>
+      <g transform="translate(42 210)"><rect width="255" height="125" rx="28" fill="${C.mint}"/><text x="26" y="48" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="${C.ink}">SERVIÇO A</text><rect x="26" y="70" width="152" height="9" rx="4" fill="${C.ink}" opacity=".22"/><rect x="26" y="92" width="105" height="9" rx="4" fill="${C.ink}" opacity=".12"/></g>
+      <g transform="translate(340 196)" filter="url(#shadow)"><rect width="255" height="153" rx="30" fill="${C.lime}"/><circle cx="214" cy="39" r="22" fill="${C.deep}"/><path d="M203 39l8 8 15-18" fill="none" stroke="${C.lime}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="26" y="57" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="${C.ink}">SERVIÇO CERTO</text><text x="26" y="91" font-family="DejaVu Sans" font-size="15" fill="${C.ink}" opacity=".66">conteúdo específico</text><rect x="26" y="112" width="137" height="9" rx="4" fill="${C.ink}" opacity=".24"/></g>
+      <g transform="translate(639 210)"><rect width="255" height="125" rx="28" fill="${C.cyan}" opacity=".28"/><text x="26" y="48" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="${C.ink}">SERVIÇO C</text><rect x="26" y="70" width="152" height="9" rx="4" fill="${C.ink}" opacity=".22"/><rect x="26" y="92" width="105" height="9" rx="4" fill="${C.ink}" opacity=".12"/></g>
+    </g>`;
+  return canvas({ background: 'url(#darkGrad)', theme: 'dark', body });
+}
+
+function focusedServicePagePost() {
+  const body = `
+    ${badge(72, 190, 'CONTEÚDO ORGANIZADO')}
+    ${textLines(72, 330, ['Uma página focada', 'deixa a decisão', 'mais clara.'], { size: 66, weight: 800 })}
+    ${textLines(72, 575, ['Nome, endereço e conteúdo trabalham', 'juntos para explicar uma solução.'], { size: 27, weight: 400, gap: 1.5, fill: '#516259' })}
+    <g transform="translate(72 755)">
+      <g opacity=".58"><rect width="355" height="365" rx="42" fill="white" stroke="${C.line}" stroke-width="3"/><text x="34" y="58" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="${C.ink}">TUDO NO MESMO LUGAR</text><rect x="34" y="91" width="287" height="11" rx="5" fill="${C.muted}"/><rect x="34" y="124" width="245" height="11" rx="5" fill="${C.muted}"/><rect x="34" y="157" width="275" height="11" rx="5" fill="${C.muted}"/><g transform="translate(278 266)"><circle r="42" fill="${C.orange}" opacity=".8"/><path d="M-14-14l28 28m0-28l-28 28" stroke="white" stroke-width="8" stroke-linecap="round"/></g><text x="34" y="305" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="${C.ink}">Informação genérica</text><text x="34" y="334" font-family="DejaVu Sans" font-size="15" fill="#617068">difícil saber onde começar</text></g>
+      <path d="M390 185h92" stroke="${C.green}" stroke-width="9" stroke-linecap="round"/><path d="M465 160l30 25-30 25" fill="none" stroke="${C.green}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+      <g transform="translate(520 0)" filter="url(#shadow)"><rect width="416" height="365" rx="42" fill="${C.deep}"/><rect x="32" y="30" width="352" height="52" rx="26" fill="#2A4D3C"/><text x="55" y="64" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="white">/servicos/solucao-especifica</text><text x="32" y="136" font-family="DejaVu Sans" font-size="25" font-weight="800" fill="white">Uma solução bem explicada</text><text x="32" y="178" font-family="DejaVu Sans" font-size="16" fill="white" opacity=".65">para a necessidade certa</text><rect x="32" y="220" width="220" height="12" rx="6" fill="white" opacity=".28"/><rect x="32" y="248" width="305" height="12" rx="6" fill="white" opacity=".17"/><rect x="32" y="292" width="205" height="52" rx="26" fill="${C.lime}"/><text x="134" y="325" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.ink}">ENTENDER A SOLUÇÃO</text></g>
+    </g>`;
+  return canvas({ background: C.cream, theme: 'light', body });
+}
+
+function servicePageChecklistPost() {
+  const items = [
+    ['Para quem é', 'a necessidade atendida'],
+    ['O que inclui', 'escopo explicado sem ruído'],
+    ['Onde atende', 'região ou formato do serviço'],
+    ['Como começar', 'próximo passo fácil de ver']
+  ];
+  const cards = items.map(([title, detail], index) => {
+    const x = index % 2 === 0 ? 72 : 552;
+    const y = index < 2 ? 680 : 900;
+    const fills = [C.lime, C.cyan, C.orange, C.yellow];
+    return `<g transform="translate(${x} ${y})"><rect width="456" height="185" rx="36" fill="white" filter="url(#shadow)"/><circle cx="58" cy="58" r="30" fill="${fills[index]}" opacity="${index === 1 ? '.45' : '.9'}"/><path d="M44 58l10 10 21-25" fill="none" stroke="${index === 0 || index === 3 ? C.ink : 'white'}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="108" y="59" font-family="DejaVu Sans" font-size="22" font-weight="800" fill="${C.ink}">${title}</text><text x="35" y="125" font-family="DejaVu Sans" font-size="17" fill="#5E6D65">${detail}</text></g>`;
+  }).join('');
+  const body = `
+    ${badge(72, 190, 'CHECKLIST DE CLAREZA', { fill: C.lime, color: C.ink })}
+    ${textLines(72, 330, ['O que uma boa página', 'de serviço explica?'], { size: 67, weight: 800, fill: C.white })}
+    ${textLines(72, 505, ['Antes do contato, responda às dúvidas', 'que ajudam o cliente a avançar.'], { size: 27, weight: 400, gap: 1.5, fill: C.white, opacity: .78 })}
+    ${cards}
+    <text x="540" y="1160" text-anchor="middle" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="${C.lime}">CLAREZA ANTES DO CONTATO</text>`;
+  return canvas({ background: 'url(#darkGrad)', theme: 'dark', body });
+}
+
+function helpfulNotFoundPost() {
+  const body = `
+    ${badge(72, 190, 'CAMINHO DE VOLTA')}
+    ${textLines(72, 330, ['Um link quebrado', 'não precisa encerrar', 'a visita.'], { size: 64, weight: 800 })}
+    ${textLines(72, 575, ['Uma boa tela de erro explica o problema', 'e oferece rotas úteis para continuar.'], { size: 26, weight: 400, gap: 1.5, fill: '#516259' })}
+    <g transform="translate(72 735)">
+      <rect width="936" height="415" rx="48" fill="${C.deep}" filter="url(#shadow)"/>
+      <g transform="translate(48 42)"><text x="0" y="86" font-family="DejaVu Sans" font-size="92" font-weight="800" fill="${C.lime}">404</text><text x="0" y="132" font-family="DejaVu Sans" font-size="20" font-weight="800" fill="white">ENDEREÇO NÃO ENCONTRADO</text><text x="0" y="172" font-family="DejaVu Sans" font-size="16" fill="white" opacity=".62">A página mudou ou o link está incorreto.</text></g>
+      <path d="M360 72v275" stroke="white" stroke-width="2" opacity=".12"/>
+      <g transform="translate(405 55)"><rect width="475" height="120" rx="30" fill="#254D39"/><circle cx="60" cy="60" r="36" fill="${C.orange}"/><path d="M46 60h28M60 46v28" stroke="white" stroke-width="7" stroke-linecap="round"/><text x="112" y="53" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="white">EXPLIQUE O PROBLEMA</text><text x="112" y="82" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".62">sem deixar a pessoa adivinhar</text></g>
+      <path d="M642 185v36" stroke="${C.cyan}" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16"/>
+      <g transform="translate(405 230)"><rect width="475" height="120" rx="30" fill="#254D39"/><circle cx="60" cy="60" r="36" fill="${C.lime}"/><path d="M45 60l10 10 22-26" fill="none" stroke="${C.ink}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><text x="112" y="53" font-family="DejaVu Sans" font-size="19" font-weight="800" fill="white">OFEREÇA ROTAS ÚTEIS</text><text x="112" y="82" font-family="DejaVu Sans" font-size="15" fill="white" opacity=".62">início, serviços ou contato</text></g>
+      <rect x="48" y="285" width="250" height="68" rx="34" fill="white"/><text x="173" y="328" text-anchor="middle" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="${C.ink}">VOLTAR AO INÍCIO</text>
+    </g>`;
+  return canvas({ background: C.cream, theme: 'light', body });
+}
+
 function headlineVisualPost({
   badgeLabel = 'PRESENÇA DIGITAL',
   title = ['Seu negócio', 'merece destaque.'],
@@ -459,6 +531,10 @@ export const templateRegistry = Object.freeze({
   'authentic-reviews': authenticReviewsPost,
   'search-result-preview': searchResultPreviewPost,
   'optimized-images': optimizedImagesPost,
+  'service-discovery': serviceDiscoveryPost,
+  'focused-service-page': focusedServicePagePost,
+  'service-page-checklist': servicePageChecklistPost,
+  'helpful-not-found': helpfulNotFoundPost,
   'headline-visual': headlineVisualPost
 });
 
