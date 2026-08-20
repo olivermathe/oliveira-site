@@ -118,6 +118,7 @@
     },
     {
       "slug": "18-imagens-leves-site-rapido",
+      "directory": "publicados/18-imagens-leves-site-rapido",
       "title": "Imagens bonitas com carregamento eficiente",
       "slides": [
         { "file": "imagem", "template": "optimized-images" }
@@ -137,6 +138,24 @@
       "title": "Página 404 que reorienta",
       "slides": [
         { "file": "imagem", "template": "helpful-not-found" }
+      ]
+    },
+    {
+      "slug": "21-busca-com-ia-sem-atalhos",
+      "title": "Busca com IA sem atalhos",
+      "slides": [
+        {
+          "file": "imagem",
+          "template": "headline-visual",
+          "data": {
+            "badgeLabel": "BUSCA COM IA",
+            "title": ["Busca com IA", "não exige", "truques."],
+            "description": ["Conteúdo útil e uma base técnica clara", "continuam sendo o caminho."],
+            "visual": "browser",
+            "cta": "COMECE PELAS PESSOAS",
+            "theme": "dark"
+          }
+        }
       ]
     }
   ]

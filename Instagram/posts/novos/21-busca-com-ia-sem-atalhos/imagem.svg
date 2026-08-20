@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#07120D" flood-opacity=".20"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0C2117"/><stop offset="1" stop-color="#244B35"/></linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF85"/><stop offset="1" stop-color="#8CCB58"/></linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+    <rect width="1080" height="1350" fill="url(#darkGrad)"/>
+    <rect width="1080" height="1350" fill="url(#grid)"/>
+
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk9saXZlaXJhIFNpdGVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+VW1hIG9saXZlaXJhIGVtIGZvcm1hIGRlIGPDqXJlYnJvIGNvbSBjb25leMO1ZXMgZGlnaXRhaXMuPC9kZXNjPgogIDxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjQ2NCIgaGVpZ2h0PSI0NjQiIHJ4PSIxMTIiIGZpbGw9IiM1NTZCMkYiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjQ5IDk5Yy0yNC0yNS02OC0xOC03OCAxNi0zMy04LTYwIDIxLTUxIDUzLTMwIDEyLTM1IDUxLTEwIDcwLTE3IDI5IDUgNjUgMzkgNjQgMTAgMzMgNTEgNDcgNzggMjUgMTYtMTMgMjYtMzMgMjktNTRWMTE5Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjYzIDk5YzI0LTI1IDY4LTE4IDc4IDE2IDMzLTggNjAgMjEgNTEgNTMgMzAgMTIgMzUgNTEgMTAgNzAgMTcgMjktNSA2NS0zOSA2NC0xMCAzMy01MSA0Ny03OCAyNS0xNi0xMy0yNi0zMy0yOS01NFYxMTkiLz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yNTYgMjc0djExMm0wLTg0LTUyLTQ1bTUyIDE4IDU0LTQ4bS01NCA5OS0zNiAzOG0zNi0yMyAzNCAzNSIvPgogICAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxMiIgZD0iTTIwNCAyNTd2LTMwbC0zMi0yN20xMzggMjd2LTMxbDMxLTI0bS0xMjktOC0zMS0yNW0xMTkgMzggMzQtMjlNMTYyIDI0MmgtMjhtMjQ0LTJoLTI4Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE0IiBkPSJNMjU2IDM4NmMtMjkgMTUtNTAgMzItNjYgNTRtNjYtNTRjMjggMTUgNTAgMzIgNjYgNTRtLTY2LTU0djU2Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiPgogICAgPGNpcmNsZSBjeD0iMTcyIiBjeT0iMjAwIiByPSIxMSIvPjxjaXJjbGUgY3g9IjE4MSIgY3k9IjEzOSIgcj0iMTEiLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIyNDIiIHI9IjExIi8+CiAgICA8Y2lyY2xlIGN4PSIzNDEiIGN5PSIxNzIiIHI9IjExIi8+PGNpcmNsZSBjeD0iMzEwIiBjeT0iMTk2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjM3OCIgY3k9IjI0MCIgcj0iMTEiLz4KICAgIDxwYXRoIGQ9Ik0xMDEgMzE5YzI3LTEyIDQ3LTYgNjEgMTUtMjcgMTItNDggNy02MS0xNVoiLz4KICAgIDxwYXRoIGQ9Ik0zNTAgMzM0YzE1LTIxIDM2LTI3IDYxLTE0LTE0IDIyLTM1IDI3LTYxIDE0WiIvPgogIDwvZz4KPC9zdmc+Cg==" x="72" y="66" width="64" height="64"/>
+    <text x="154" y="105" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">OLIVEIRA SITES</text>
+    <circle cx="1000" cy="98" r="5" fill="#B9E769"/>
+    <circle cx="978" cy="98" r="5" fill="#67D7D0" opacity=".75"/>
+    <circle cx="956" cy="98" r="5" fill="#FFFFFF" opacity=".25"/>
+
+    <g transform="translate(72 190)"><rect width="180" height="42" rx="21" fill="#B9E769"/><text x="90" y="29" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="800" fill="#10231A">BUSCA COM IA</text></g>
+    <text x="72" y="330" font-family="DejaVu Sans, sans-serif" font-size="68" font-weight="800" fill="#FFFFFF" text-anchor="start" opacity="1"><tspan x="72" dy="0">Busca com IA</tspan><tspan x="72" dy="76.16000000000001">não exige</tspan><tspan x="72" dy="76.16000000000001">truques.</tspan></text>
+    <text x="72" y="545" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="400" fill="#FFFFFF" text-anchor="start" opacity="0.78"><tspan x="72" dy="0">Conteúdo útil e uma base técnica clara</tspan><tspan x="72" dy="40.5">continuam sendo o caminho.</tspan></text>
+    <circle cx="840" cy="420" r="285" fill="#67D7D0" opacity=".12"/>
+    <g filter="url(#shadow)">
+    <rect x="500" y="680" width="500" height="390" rx="28" fill="#183426"/>
+    <rect x="500" y="680" width="500" height="64" rx="28" fill="#0E241A"/>
+    <circle cx="528" cy="712" r="7" fill="#FF9566"/><circle cx="551" cy="712" r="7" fill="#FFD66B"/><circle cx="574" cy="712" r="7" fill="#67D7D0"/>
+    <rect x="612" y="698" width="358" height="28" rx="14" fill="#274536"/>
+    <rect x="534" y="783" width="230" height="16" rx="8" fill="#FFFFFF" opacity=".88"/>
+    <rect x="534" y="819" width="170" height="10" rx="5" fill="#FFFFFF" opacity=".28"/>
+    <rect x="534" y="841" width="200" height="10" rx="5" fill="#FFFFFF" opacity=".18"/>
+    <rect x="534" y="883" width="130" height="44" rx="22" fill="#B9E769"/>
+    <rect x="795" y="775" width="160" height="258" rx="22" fill="#B9E769" opacity=".22"/>
+    <circle cx="875" cy="886.7" r="39" fill="#B9E769" opacity=".7"/>
+  </g>
+    <rect x="72" y="1010" width="380" height="82" rx="41" fill="#B9E769"/>
+    <text x="262" y="1062" text-anchor="middle" font-family="DejaVu Sans" font-size="22" font-weight="800" fill="#10231A">COMECE PELAS PESSOAS</text>
+    <text x="72" y="1292" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" opacity=".78">@oliveira.sites.tech</text>
+  <rect x="910" y="1274" width="98" height="4" rx="2" fill="#B9E769"/>
+  </svg>

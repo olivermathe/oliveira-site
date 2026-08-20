@@ -20,16 +20,16 @@ test('as artes não exibem identificadores internos', () => {
   }
 });
 
-test('a configuração declarativa possui dezessete conteúdos e vinte e três artes', async () => {
+test('a configuração declarativa possui dezoito conteúdos e vinte e quatro artes', async () => {
   const contents = await listContents();
-  assert.equal(contents.length, 17);
-  assert.equal(contents.reduce((total, content) => total + content.artworks, 0), 23);
+  assert.equal(contents.length, 18);
+  assert.equal(contents.reduce((total, content) => total + content.artworks, 0), 24);
 });
 
 test('conteúdos publicados permanecem na pasta de arquivo', async () => {
   const contents = await listContents();
-  const published = contents.filter(({ slug }) => /^(0[4-9]|1[0-7])-/.test(slug));
-  assert.equal(published.length, 14);
+  const published = contents.filter(({ slug }) => /^(0[4-9]|1[0-8])-/.test(slug));
+  assert.equal(published.length, 15);
   assert.equal(
     published.every(({ directory, slug }) => directory === `publicados/${slug}`),
     true
@@ -38,7 +38,7 @@ test('conteúdos publicados permanecem na pasta de arquivo', async () => {
 
 test('conteúdos sem diretório explícito são gerados na pasta de novos', async () => {
   const contents = await listContents();
-  const newContents = contents.filter(({ slug }) => /^(18|19|20)-/.test(slug));
+  const newContents = contents.filter(({ slug }) => /^(19|20|21)-/.test(slug));
   assert.equal(newContents.length, 3);
   assert.equal(
     newContents.every(({ directory, slug }) => directory === `novos/${slug}`),
