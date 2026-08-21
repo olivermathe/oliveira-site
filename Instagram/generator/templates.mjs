@@ -521,6 +521,38 @@ function professionalEmailPost() {
   return canvas({ background: C.cream, theme: 'light', body });
 }
 
+function sharedLinkPreviewPost() {
+  const body = `
+    ${badge(72, 190, 'LINK COMPARTILHADO', { fill: C.lime, color: C.ink })}
+    ${textLines(72, 330, ['Seu link também', 'precisa causar', 'boa impressão.'], { size: 62, weight: 800, fill: C.white })}
+    ${textLines(72, 565, ['Defina a prévia antes que a plataforma', 'escolha por conta própria.'], { size: 26, weight: 400, gap: 1.5, fill: C.white, opacity: .76 })}
+    <g transform="translate(72 725)">
+      <rect width="936" height="420" rx="48" fill="#F9F8F2" filter="url(#shadow)"/>
+      <g transform="translate(42 42)">
+        <rect width="852" height="56" rx="28" fill="#E7EEE8"/>
+        <circle cx="32" cy="28" r="18" fill="${C.green}"/>
+        <path d="M25 28l5 5 10-12" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="64" y="35" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="${C.ink}">Confira nosso serviço</text>
+      </g>
+      <g transform="translate(42 122)">
+        <rect width="852" height="250" rx="32" fill="white" stroke="${C.line}" stroke-width="2"/>
+        <rect width="300" height="250" rx="32" fill="${C.mint}"/>
+        <circle cx="150" cy="112" r="70" fill="${C.lime}"/>
+        <path d="M112 112h76M125 92h50M130 132h40" stroke="${C.ink}" stroke-width="10" stroke-linecap="round"/>
+        <rect x="340" y="36" width="136" height="32" rx="16" fill="${C.lime}"/>
+        <text x="408" y="58" text-anchor="middle" font-family="DejaVu Sans" font-size="13" font-weight="800" fill="${C.ink}">SUAEMPRESA.COM.BR</text>
+        <text x="340" y="112" font-family="DejaVu Sans" font-size="27" font-weight="800" fill="${C.ink}">Serviço claro para</text>
+        <text x="340" y="148" font-family="DejaVu Sans" font-size="27" font-weight="800" fill="${C.ink}">quem precisa decidir</text>
+        <text x="340" y="193" font-family="DejaVu Sans" font-size="17" fill="#5A6B61">Imagem, título e descrição trabalham juntos.</text>
+      </g>
+    </g>
+    <g transform="translate(694 655)">
+      <rect width="250" height="62" rx="31" fill="${C.orange}"/>
+      <text x="125" y="39" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="white">PRÉVIA CONFIGURADA</text>
+    </g>`;
+  return canvas({ background: 'url(#darkGrad)', theme: 'dark', body });
+}
+
 function headlineVisualPost({
   badgeLabel = 'PRESENÇA DIGITAL',
   title = ['Seu negócio', 'merece destaque.'],
@@ -573,6 +605,7 @@ export const templateRegistry = Object.freeze({
   'service-page-checklist': servicePageChecklistPost,
   'helpful-not-found': helpfulNotFoundPost,
   'professional-email': professionalEmailPost,
+  'shared-link-preview': sharedLinkPreviewPost,
   'headline-visual': headlineVisualPost
 });
 

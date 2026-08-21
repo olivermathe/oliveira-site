@@ -136,6 +136,7 @@
     },
     {
       "slug": "20-pagina-404-que-reorienta",
+      "directory": "publicados/20-pagina-404-que-reorienta",
       "title": "Página 404 que reorienta",
       "slides": [
         { "file": "imagem", "template": "helpful-not-found" }
@@ -164,6 +165,13 @@
       "title": "E-mail profissional no domínio da empresa",
       "slides": [
         { "file": "imagem", "template": "professional-email" }
+      ]
+    },
+    {
+      "slug": "23-previa-do-link-ao-compartilhar",
+      "title": "Prévia do link ao compartilhar o site",
+      "slides": [
+        { "file": "imagem", "template": "shared-link-preview" }
       ]
     }
   ]
