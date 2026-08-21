@@ -484,6 +484,43 @@ function helpfulNotFoundPost() {
   return canvas({ background: C.cream, theme: 'light', body });
 }
 
+function professionalEmailPost() {
+  const body = `
+    ${badge(72, 190, 'E-MAIL PROFISSIONAL')}
+    ${textLines(72, 330, ['Seu domínio pode', 'ir além do site.'], { size: 66, weight: 800 })}
+    ${textLines(72, 505, ['Use o nome da sua marca também', 'depois do @.'], { size: 27, weight: 400, gap: 1.5, fill: '#516259' })}
+    <g transform="translate(72 665)" filter="url(#shadow)">
+      <rect width="936" height="480" rx="48" fill="${C.deep}"/>
+      <g transform="translate(48 48)">
+        <circle cx="76" cy="76" r="76" fill="${C.lime}"/>
+        <path d="M35 50h82v57H35z" fill="none" stroke="${C.ink}" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M37 53l39 33 39-33" fill="none" stroke="${C.ink}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="0" y="205" font-family="DejaVu Sans" font-size="18" font-weight="800" fill="white" opacity=".58">REMETENTE</text>
+        <text x="0" y="246" font-family="DejaVu Sans" font-size="25" font-weight="800" fill="white">Sua empresa</text>
+        <text x="0" y="282" font-family="DejaVu Sans" font-size="18" fill="white" opacity=".66">marca no remetente</text>
+      </g>
+      <g transform="translate(285 48)">
+        <rect width="603" height="285" rx="34" fill="white"/>
+        <text x="38" y="54" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.green}">DE</text>
+        <text x="92" y="54" font-family="DejaVu Sans" font-size="21" font-weight="800" fill="${C.ink}">contato@suaempresa.com.br</text>
+        <path d="M38 82h527" stroke="${C.line}" stroke-width="2"/>
+        <text x="38" y="130" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.green}">ASSUNTO</text>
+        <text x="38" y="174" font-family="DejaVu Sans" font-size="22" font-weight="800" fill="${C.ink}">Seu orçamento está pronto</text>
+        <rect x="38" y="211" width="250" height="50" rx="25" fill="${C.lime}"/>
+        <text x="163" y="243" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="${C.ink}">IDENTIDADE CONSISTENTE</text>
+      </g>
+      <g transform="translate(285 360)">
+        <rect width="174" height="64" rx="32" fill="white" opacity=".10"/>
+        <text x="87" y="40" text-anchor="middle" font-family="DejaVu Sans" font-size="17" font-weight="800" fill="white">contato@</text>
+        <rect x="194" width="174" height="64" rx="32" fill="${C.cyan}" opacity=".24"/>
+        <text x="281" y="40" text-anchor="middle" font-family="DejaVu Sans" font-size="17" font-weight="800" fill="white">vendas@</text>
+        <rect x="388" width="174" height="64" rx="32" fill="${C.orange}" opacity=".30"/>
+        <text x="475" y="40" text-anchor="middle" font-family="DejaVu Sans" font-size="17" font-weight="800" fill="white">suporte@</text>
+      </g>
+    </g>`;
+  return canvas({ background: C.cream, theme: 'light', body });
+}
+
 function headlineVisualPost({
   badgeLabel = 'PRESENÇA DIGITAL',
   title = ['Seu negócio', 'merece destaque.'],
@@ -535,6 +572,7 @@ export const templateRegistry = Object.freeze({
   'focused-service-page': focusedServicePagePost,
   'service-page-checklist': servicePageChecklistPost,
   'helpful-not-found': helpfulNotFoundPost,
+  'professional-email': professionalEmailPost,
   'headline-visual': headlineVisualPost
 });
 

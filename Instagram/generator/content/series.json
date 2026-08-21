@@ -126,6 +126,7 @@
     },
     {
       "slug": "19-paginas-de-servico-claras",
+      "directory": "publicados/19-paginas-de-servico-claras",
       "title": "Páginas de serviço claras",
       "slides": [
         { "file": "01-encontre-o-servico", "template": "service-discovery" },
@@ -156,6 +157,13 @@
             "theme": "dark"
           }
         }
+      ]
+    },
+    {
+      "slug": "22-email-profissional-no-dominio",
+      "title": "E-mail profissional no domínio da empresa",
+      "slides": [
+        { "file": "imagem", "template": "professional-email" }
       ]
     }
   ]
