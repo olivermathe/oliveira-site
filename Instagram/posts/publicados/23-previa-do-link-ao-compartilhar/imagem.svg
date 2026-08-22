@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+    <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#07120D" flood-opacity=".20"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="55"/></filter>
+    <linearGradient id="darkGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0C2117"/><stop offset="1" stop-color="#244B35"/></linearGradient>
+    <linearGradient id="limeGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D8FF85"/><stop offset="1" stop-color="#8CCB58"/></linearGradient>
+    <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#FFFFFF" stroke-opacity=".055" stroke-width="1"/></pattern>
+  </defs>
+    <rect width="1080" height="1350" fill="url(#darkGrad)"/>
+    <rect width="1080" height="1350" fill="url(#grid)"/>
+
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPgogIDx0aXRsZSBpZD0idGl0bGUiPk9saXZlaXJhIFNpdGVzPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+VW1hIG9saXZlaXJhIGVtIGZvcm1hIGRlIGPDqXJlYnJvIGNvbSBjb25leMO1ZXMgZGlnaXRhaXMuPC9kZXNjPgogIDxyZWN0IHg9IjI0IiB5PSIyNCIgd2lkdGg9IjQ2NCIgaGVpZ2h0PSI0NjQiIHJ4PSIxMTIiIGZpbGw9IiM1NTZCMkYiLz4KICA8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjQ5IDk5Yy0yNC0yNS02OC0xOC03OCAxNi0zMy04LTYwIDIxLTUxIDUzLTMwIDEyLTM1IDUxLTEwIDcwLTE3IDI5IDUgNjUgMzkgNjQgMTAgMzMgNTEgNDcgNzggMjUgMTYtMTMgMjYtMzMgMjktNTRWMTE5Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE4IiBkPSJNMjYzIDk5YzI0LTI1IDY4LTE4IDc4IDE2IDMzLTggNjAgMjEgNTEgNTMgMzAgMTIgMzUgNTEgMTAgNzAgMTcgMjktNSA2NS0zOSA2NC0xMCAzMy01MSA0Ny03OCAyNS0xNi0xMy0yNi0zMy0yOS01NFYxMTkiLz4KICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMTYiIGQ9Ik0yNTYgMjc0djExMm0wLTg0LTUyLTQ1bTUyIDE4IDU0LTQ4bS01NCA5OS0zNiAzOG0zNi0yMyAzNCAzNSIvPgogICAgPHBhdGggc3Ryb2tlLXdpZHRoPSIxMiIgZD0iTTIwNCAyNTd2LTMwbC0zMi0yN20xMzggMjd2LTMxbDMxLTI0bS0xMjktOC0zMS0yNW0xMTkgMzggMzQtMjlNMTYyIDI0MmgtMjhtMjQ0LTJoLTI4Ii8+CiAgICA8cGF0aCBzdHJva2Utd2lkdGg9IjE0IiBkPSJNMjU2IDM4NmMtMjkgMTUtNTAgMzItNjYgNTRtNjYtNTRjMjggMTUgNTAgMzIgNjYgNTRtLTY2LTU0djU2Ii8+CiAgPC9nPgogIDxnIGZpbGw9IiNmZmYiPgogICAgPGNpcmNsZSBjeD0iMTcyIiBjeT0iMjAwIiByPSIxMSIvPjxjaXJjbGUgY3g9IjE4MSIgY3k9IjEzOSIgcj0iMTEiLz48Y2lyY2xlIGN4PSIxMzQiIGN5PSIyNDIiIHI9IjExIi8+CiAgICA8Y2lyY2xlIGN4PSIzNDEiIGN5PSIxNzIiIHI9IjExIi8+PGNpcmNsZSBjeD0iMzEwIiBjeT0iMTk2IiByPSIxMSIvPjxjaXJjbGUgY3g9IjM3OCIgY3k9IjI0MCIgcj0iMTEiLz4KICAgIDxwYXRoIGQ9Ik0xMDEgMzE5YzI3LTEyIDQ3LTYgNjEgMTUtMjcgMTItNDggNy02MS0xNVoiLz4KICAgIDxwYXRoIGQ9Ik0zNTAgMzM0YzE1LTIxIDM2LTI3IDYxLTE0LTE0IDIyLTM1IDI3LTYxIDE0WiIvPgogIDwvZz4KPC9zdmc+Cg==" x="72" y="66" width="64" height="64"/>
+    <text x="154" y="105" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">OLIVEIRA SITES</text>
+    <circle cx="1000" cy="98" r="5" fill="#B9E769"/>
+    <circle cx="978" cy="98" r="5" fill="#67D7D0" opacity=".75"/>
+    <circle cx="956" cy="98" r="5" fill="#FFFFFF" opacity=".25"/>
+
+    <g transform="translate(72 190)"><rect width="246" height="42" rx="21" fill="#B9E769"/><text x="123" y="29" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="800" fill="#10231A">LINK COMPARTILHADO</text></g>
+    <text x="72" y="330" font-family="DejaVu Sans, sans-serif" font-size="62" font-weight="800" fill="#FFFFFF" text-anchor="start" opacity="1"><tspan x="72" dy="0">Seu link também</tspan><tspan x="72" dy="69.44000000000001">precisa causar</tspan><tspan x="72" dy="69.44000000000001">boa impressão.</tspan></text>
+    <text x="72" y="565" font-family="DejaVu Sans, sans-serif" font-size="26" font-weight="400" fill="#FFFFFF" text-anchor="start" opacity="0.76"><tspan x="72" dy="0">Defina a prévia antes que a plataforma</tspan><tspan x="72" dy="39">escolha por conta própria.</tspan></text>
+    <g transform="translate(72 725)">
+      <rect width="936" height="420" rx="48" fill="#F9F8F2" filter="url(#shadow)"/>
+      <g transform="translate(42 42)">
+        <rect width="852" height="56" rx="28" fill="#E7EEE8"/>
+        <circle cx="32" cy="28" r="18" fill="#567A35"/>
+        <path d="M25 28l5 5 10-12" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="64" y="35" font-family="DejaVu Sans" font-size="17" font-weight="700" fill="#10231A">Confira nosso serviço</text>
+      </g>
+      <g transform="translate(42 122)">
+        <rect width="852" height="250" rx="32" fill="white" stroke="#D7DED6" stroke-width="2"/>
+        <rect width="300" height="250" rx="32" fill="#DDF4C7"/>
+        <circle cx="150" cy="112" r="70" fill="#B9E769"/>
+        <path d="M112 112h76M125 92h50M130 132h40" stroke="#10231A" stroke-width="10" stroke-linecap="round"/>
+        <rect x="340" y="36" width="136" height="32" rx="16" fill="#B9E769"/>
+        <text x="408" y="58" text-anchor="middle" font-family="DejaVu Sans" font-size="13" font-weight="800" fill="#10231A">SUAEMPRESA.COM.BR</text>
+        <text x="340" y="112" font-family="DejaVu Sans" font-size="27" font-weight="800" fill="#10231A">Serviço claro para</text>
+        <text x="340" y="148" font-family="DejaVu Sans" font-size="27" font-weight="800" fill="#10231A">quem precisa decidir</text>
+        <text x="340" y="193" font-family="DejaVu Sans" font-size="17" fill="#5A6B61">Imagem, título e descrição trabalham juntos.</text>
+      </g>
+    </g>
+    <g transform="translate(694 655)">
+      <rect width="250" height="62" rx="31" fill="#FF9566"/>
+      <text x="125" y="39" text-anchor="middle" font-family="DejaVu Sans" font-size="16" font-weight="800" fill="white">PRÉVIA CONFIGURADA</text>
+    </g>
+    <text x="72" y="1292" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" opacity=".78">@oliveira.sites.tech</text>
+  <rect x="910" y="1274" width="98" height="4" rx="2" fill="#B9E769"/>
+  </svg>
